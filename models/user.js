@@ -27,14 +27,13 @@ const UserSchema = new Schema({
         required: true,
         unique: false,
         trim: true
-    }
-    /*,
+    },
     trips: [
         {
             type: Schema.Types.ObjectId,
             ref: "Trip"
         }
-    ]*/
+    ]
 });
 
 /*UserSchema.prototype.validPassword = function(password) {

@@ -35,13 +35,7 @@ const TripSchema = new Schema({
     },
     budget: {
         type: Number
-    },
-    creator: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: "User"       
-        }
-    ]
+    }
 });
 
 const Trip = mongoose.model("Trip", TripSchema);

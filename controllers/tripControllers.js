@@ -2,19 +2,16 @@ const db = require("../models");
 
 module.exports = {
     create: function(req,res) {
-        //console.log("_ID", res.locals.user._id);
-        db.Trip.create({
-            name: req.body.name,
-            destination: req.body.destination,
-            flight: req.body.flight,
-            date: req.body.date,
-            category: req.body.category,
-            budget: req.body.budget,
-            creator: req.params.id
-        })
-        .then(dbTrip => {
-            console.log(dbTrip);
-            res.json(dbTrip);
+        let userId = req.params.id;
+        console.log("USERID",userId);
+        db.Trip.create(req.body)
+        .then(({_id}) => {
+            console.log("TRIPID",_id);
+            db.User.findByIdAndUpdate({ _id: userId }, { $push: { trips: _id } }, { new: true })
+            .then(dbUser => res.json(dbUser));
+        }) 
+        .catch(err => {
+            res.json(err);
         });
     },
 
