@@ -27,7 +27,7 @@ module.exports = {
             db.User.findOne({
                 _id: req.params.id
             })
-            .populate('destination')
+            .populate('trips')
             .then(user => {
                 res.json(user);
             })

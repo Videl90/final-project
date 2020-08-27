@@ -8,7 +8,7 @@ module.exports = {
         .then(({_id}) => {
             console.log("TRIPID",_id);
             db.User.findByIdAndUpdate({ _id: userId }, { $push: { trips: _id } }, { new: true })
-            .then(dbUser => console.log(dbUser));
+            .then(dbUser => res.json(dbUser));
         }) 
         .catch(err => {
             res.json(err);
