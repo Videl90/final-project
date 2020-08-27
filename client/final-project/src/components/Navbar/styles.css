@@ -1,0 +1,18 @@
+.navbar{
+    background-color: none;
+    background-image: url("../../assets/nav.png");
+    height: 85px;
+}
+
+.nav-item{
+    margin-top:-20px;
+}
+
+.navbar-nav{
+    margin-left:1150px;
+
+}
+
+.navbar-expand-lg{
+    height:35px;
+}
