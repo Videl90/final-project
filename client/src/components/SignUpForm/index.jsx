@@ -18,9 +18,10 @@ function SignUpForm(){
                 <input type="password" class="form-control" id="exampleInputPassword1"></input>
             </div>
             <input class="btn btn-primary" type="submit" value="SUBMIT"></input>
-            <a href="#" className="changeForm">LOGIN</a>
+            <a href="#" className="changeForm">LOG IN</a>
+            {/* aqui funcion para enviar a otro lado*/}
         </form>
     )
 }
 
-export default SignUpForm
+export default SignUpForm;
