@@ -6,10 +6,10 @@ function NewTripInput() {
     <form className="form newtrip-container">
       <p className="newtrip-form-title">PLAN YOUR NEXT TRIP!</p>
         <div className="row">
-            <div className="col-6">
+            <div className="col-lg-6 col-sm-12">
                 <input type="text" className="newtrip-form-control form-control" placeholder="Location"/>
             </div>
-            <div className="col-6">
+            <div className="col-lg-6 col-sm-12">
             <div className="input-group mb-3">
                 <select class="custom-select newtrip-form-control" id="inputGroupSelect01">
                 <option>Business or Vacation</option>
@@ -21,7 +21,7 @@ function NewTripInput() {
         </div>
 
         <div className="row">
-            <div className="col-6">
+            <div className="col-lg-6 col-sm-12">
                 <div className="row">
                     <div className="col-4">
                         <div className="input-group mb-3">
@@ -56,7 +56,7 @@ function NewTripInput() {
                 </div>
             </div>     
 
-            <div className="col-6">
+            <div className="col-lg-6 col-sm-12">
                 <div className="row">   
                     <div className="col-12">
                         <input type="text" className="newtrip-form-control form-control" placeholder="Name your trip"/>
@@ -64,7 +64,7 @@ function NewTripInput() {
                 </div>
             </div>
         </div>
-
+        <button className="btn btn-primary" type="submit" value="SUBMIT">Search</button>
     </form>
   );
 }

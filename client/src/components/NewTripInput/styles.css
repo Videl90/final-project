@@ -3,8 +3,8 @@
     background-color: #DDEFFF;
     width: 90%;
     margin-top:100px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding: 20px;
+    padding-bottom: 60px;
 }
 
 .newtrip-form-title{
@@ -24,10 +24,6 @@
 
 .form-group{
     margin: 40px ;
-}
-
-.col-4{
-    color: #ff8023;
 }
 
 .newtripinput-btn-primary{
