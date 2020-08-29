@@ -1,0 +1,57 @@
+.newtrip-container {
+    margin: 0 auto;
+    background-color: #DDEFFF;
+    width: 90%;
+    margin-top:100px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.newtrip-form-title{
+    color: #0A1F30;
+    padding-top: 25px;
+    text-align:center;
+    font-weight: 600;
+    font-stretch: extra-expanded;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.newtrip-form-control{
+    border: 1px solid #81b6ff;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.form-group{
+    margin: 40px ;
+}
+
+.col-4{
+    color: #ff8023;
+}
+
+.newtripinput-btn-primary{
+    background-color:#ff8023;
+    color:#ffffff;
+    border: none;
+    margin-left: 243px;
+}
+
+.newtripinput-btn-primary:hover{
+    background-color:#81b6ff;
+    color:#ffffff;
+}
+
+.newtripinput-changeForm{
+    color:#ff8023;
+    text-decoration: none;
+    margin-left:15px;
+}
+
+.newtripinput-changeForm:hover{
+    color:#81b6ff;
+    text-decoration:none;
+    text-align: left;
+}
+
+

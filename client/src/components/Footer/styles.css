@@ -1,6 +1,8 @@
 .footer{
     background-color: #FF8023;
     height: 70px;
+    color: white;
+    text-align: center;
     vertical-align: bottom;
     display: flex;
     position:absolute;
