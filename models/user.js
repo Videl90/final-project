@@ -10,14 +10,14 @@ const UserSchema = new Schema({
     username: {
         type: String,
         required: true,
-        unique: false,
+        unique: true,
         trim: true
     },
     // The email cannot be null, and must be a proper email before creation
     email: {
         type: String,
         required: true,
-        unique: false,
+        unique: true,
         trim: true,
         match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
     },
@@ -25,7 +25,7 @@ const UserSchema = new Schema({
     password: {
         type: String,
         required: true,
-        unique: false,
+        unique: true,
         trim: true
     },
     trips: [
