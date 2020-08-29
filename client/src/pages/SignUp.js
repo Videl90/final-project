@@ -5,8 +5,8 @@ import SignUpForm from "../components/SignUpForm";
 function SignUp(){
     return (
         <div>
-            <Navbar /> 
-            <SignUpForm /> 
+            <Navbar />
+            <SignUpForm/> 
         </div>
     )
 }

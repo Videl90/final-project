@@ -46,14 +46,13 @@ module.exports = {
         })
         .then(dbModel => {
             console.log(dbModel);
-            res.json(dbModel); //Can't have two res
-            res.redirect("/app/login");
+            res.redirect("/api/users/login");
         })
         .catch(err => res.status(422).json(err));
     },
     logout: function(req,res) {
         console.log(req);
         req.logout();
-        res.redirect("/");
+        res.redirect("/api/users/login");
     }
 };

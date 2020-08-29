@@ -23,7 +23,8 @@ label {
     background-color:#ff8023;
     color:#ffffff;
     border: none;
-    margin-left: 243px;
+    float: right;
+    margin: 10px;
 }
 
 .btn-primary:hover{
