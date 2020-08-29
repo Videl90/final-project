@@ -14,3 +14,12 @@
 .navbar-expand-lg{
     height:35px;
 }
+
+.navbar-toggler{
+border: 1px solid #ff8023;
+}
+
+.navbar-toggler-icon{
+    height: 1.2em;
+    }
+    

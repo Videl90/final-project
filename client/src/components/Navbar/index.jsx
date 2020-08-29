@@ -8,12 +8,11 @@ function Navbar(){
         <div className="container-fluid navbar">
             <nav class="navbar navbar-expand-lg">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"><svg width="1em" viewBox="0 0 16 16" class="bi bi-three-dots" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path stroke="#81b6ff" fill-rule="evenodd" d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+</svg></span>
                 </button>
-                <div>
-                    
-                </div>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse fixed-bottom" id="navbarNav">
                     <ul class="navbar-nav">
                     <li class="nav-item">
                         <Button btnName="HOME">
