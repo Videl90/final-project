@@ -1,6 +1,6 @@
-.form-control{
+.emailInput, .passwordInput{
     border: 1px solid #81b6ff;
-    width: 400px;
+    width: 98%;
 }
 
 label {

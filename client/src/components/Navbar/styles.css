@@ -2,15 +2,13 @@
     background-color: none;
     background-image: url("../../assets/nav.png");
     height: 85px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
 }
 
 .nav-item{
     margin-top:-20px;
-}
-
-.navbar-nav{
-    margin-left:1150px;
-
 }
 
 .navbar-expand-lg{

@@ -39,25 +39,27 @@ function SignUpForm(){
     }
 
     return (
-        <form className="form" onSubmit = {handleSubmitForm}>
-            <p className="form-title">SIGN UP</p>
-            <div className="form-group">
-                <label for="exampleInputEmail1">NAME</label>
-                <input type="text" className="form-control" ref={userRef} placeholder="Insert your username"></input>
-            </div>
-            <div className="form-group">
-                <label for="exampleInputEmail1">EMAIL</label>
-                <input type="email" className="form-control" ref={emailRef} id="exampleInputEmail1" placeholder="example@email.com" aria-describedby="emailHelp"></input>
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">PASSWORD</label>
-                <input type="password" className="form-control" ref={passwordRef} id="exampleInputPassword1" placeholder="Password"></input>
-                <button className="signupBtn">Sign Up</button>
-            </div>
-            {/*<input class="btn btn-primary" type="submit" value="SUBMIT"></input>*/}
-            <a href="/login" className="toLogin">Already a member?<span><strong> Log In</strong></span></a>
-            {/* aqui funcion para enviar a otro lado*/}
-        </form>
+        <div className="container">
+            <form className="form" onSubmit = {handleSubmitForm}>
+                <p className="form-title">SIGN UP</p>
+                <div className="form-group">
+                    <label for="exampleInputEmail1">NAME</label>
+                    <input type="text" className="form-control usernameInput" ref={userRef} placeholder="Insert your username"></input>
+                </div>
+                <div className="form-group">
+                    <label for="exampleInputEmail1">EMAIL</label>
+                    <input type="email" className="form-control emailInput2" ref={emailRef} id="exampleInputEmail1" placeholder="example@email.com" aria-describedby="emailHelp"></input>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">PASSWORD</label>
+                    <input type="password" className="form-control passwordInput2" ref={passwordRef} id="exampleInputPassword1" placeholder="Password"></input>
+                    <button className="signupBtn">Sign Up</button>
+                </div>
+                {/*<input class="btn btn-primary" type="submit" value="SUBMIT"></input>*/}
+                <a href="/login" className="toLogin">Already a member?<span><strong> Log In</strong></span></a>
+                {/* aqui funcion para enviar a otro lado*/}
+            </form>
+        </div>
     )
 }
 
