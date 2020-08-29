@@ -1,6 +1,6 @@
-.form-control{
+.emailInput, .passwordInput{
     border: 1px solid #81b6ff;
-    width: 400px;
+    width: 98%;
 }
 
 label {
@@ -23,7 +23,8 @@ label {
     background-color:#ff8023;
     color:#ffffff;
     border: none;
-    margin-left: 243px;
+    float: right;
+    margin: 10px;
 }
 
 .btn-primary:hover{

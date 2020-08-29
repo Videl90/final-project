@@ -1,6 +1,6 @@
-.form-control{
+.usernameInput, .emailInput2, .passwordInput2{
     border: 1px solid #81b6ff;
-    width: 400px;
+    width: 98%;
 }
 
 label {
@@ -33,13 +33,32 @@ label {
 
 
 .changeForm{
-    color:#ff8023;
+    color:white !important;
     text-decoration: none;
-    margin-left:15px;
+    /*margin-left:15px;*/
+    margin: 10px;
 }
 
 .changeForm:hover{
     color:#81b6ff;
     text-decoration:none;
     text-align: left;
+}
+
+.signupBtn {
+    margin: 10px;
+    background-color: #ff8023;
+    border-radius: 0.3em;
+    float: right;
+    border: none;
+    padding: 5px;
+    color: white;
+}
+
+.toLogin {
+    margin: 5px auto;
+}
+
+.linkToSignup {
+    text-decoration: none;
 }
