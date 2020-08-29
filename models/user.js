@@ -10,7 +10,7 @@ const UserSchema = new Schema({
     username: {
         type: String,
         required: true,
-        unique: true,
+        unique: false,
         trim: true
     },
     // The email cannot be null, and must be a proper email before creation
