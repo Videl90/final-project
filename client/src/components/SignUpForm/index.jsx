@@ -1,11 +1,16 @@
 import React, { useState, useRef } from "react";
 import "./styles.css";
 import API from "../../utils/API";
+import { useHistory } from "react-router-dom";
+
+//const isAuthenticated = require("../../../../config/middleware/isAuthenticated");
 
 function SignUpForm(){
     const userRef = useRef();
     const emailRef = useRef();
     const passwordRef = useRef();
+
+    const history = useHistory();
     
     const [userInfo, setUserInfo] = useState({});
 
@@ -21,6 +26,10 @@ function SignUpForm(){
         })
         .then(result => {
             setUserInfo(result.data)
+            //res.redirect("/login");
+            history.push({
+                pathname:"/login"
+            });
         })
         .catch(err => console.log(err));
 
