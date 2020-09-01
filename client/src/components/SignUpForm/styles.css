@@ -1,6 +1,6 @@
 .usernameInput, .emailInput2, .passwordInput2{
     border: 1px solid #81b6ff;
-    width: 98%;
+    width: 100%;
 }
 
 label {
