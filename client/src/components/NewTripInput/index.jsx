@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.css";
+
 import DayPicker from 'react-day-picker/DayPickerInput';
 import 'react-day-picker/lib/style.css';
 
@@ -26,6 +27,7 @@ function NewTripInput(props) {
             <div className="col-lg-6 col-sm-12">
                 <div className="row">
                     <div className="col-4">
+
                         <div className="input-group mb-3">
                         <select className="custom-select newtrip-form-control" name="numberOfPeople" id="inputGroupSelect01" {...props}>
                             <option value="" disabled selected hidden>0</option>
@@ -38,6 +40,7 @@ function NewTripInput(props) {
                         </div>
                     </div>    
                     <div className="col-4">
+
                     <div className="finput-group mb-3">
                         {/* <select className="custom-select newtrip-form-control" name="departure" id="inputGroupSelect01" {...props}>
                             <option>Departure Date</option>
@@ -47,18 +50,20 @@ function NewTripInput(props) {
 
                     </div>    
                     <div className="col-4">
-                    <div className="input-group mb-3">
+                      <div className="input-group mb-3">
+
                     {/* <select className="custom-select newtrip-form-control" name="arrival" id="inputGroupSelect01" {...props}>
                         <option>Arrival Date</option>
                     </select> */}
-                    <DayPicker className="custom-select newtrip-form-control" name="arrival" id="inputGroupSelect01"/>
-                        </div>
+                        <DayPicker className="custom-select newtrip-form-control" name="arrival" id="inputGroupSelect01"/>
+                      </div>
                     </div>  
                 </div>
             </div>     
 
             <div className="col-lg-6 col-sm-12">
                 <div className="row">   
+
                     <div className="col-12">
                         <input type="text" className="newtrip-form-control form-control" name="tripname" placeholder="Name your trip" {...props}/>
                     </div>     
