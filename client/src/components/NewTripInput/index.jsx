@@ -1,5 +1,7 @@
 import React from "react";
 import "./styles.css";
+import DayPickerDeparture from '../DayPickerDeparture';
+import DayPickerReturn from '../DayPickerReturn';
 
 function NewTripInput() {
   return (
@@ -24,7 +26,7 @@ function NewTripInput() {
             <div className="col-lg-6 col-sm-12">
                 <div className="row">
                     <div className="col-4">
-                        <div className="input-group mb-3">
+                        <div className="input-group mb-3 persons">
                         <select className="custom-select newtrip-form-control" id="inputGroupSelect01">
                             <option value="" disabled selected hidden>0</option>
                             <option value="1">1</option>
@@ -36,21 +38,15 @@ function NewTripInput() {
                         </div>
                     </div>    
                     <div className="col-4">
-                    <div className="finput-group mb-3">
-                    <select className="custom-select newtrip-form-control" id="inputGroupSelect01">
-                        <option>Start Date</option>
-                        <option>1</option>
-                        </select>
-                        </div>
+                    <div className="input-group mb-3">
+                      <DayPickerDeparture/>
+                    </div>
 
                     </div>    
                     <div className="col-4">
                     <div className="input-group mb-3">
-                    <select className="custom-select newtrip-form-control" id="inputGroupSelect01">
-                        <option>End Date</option>
-                        <option>1</option>
-                        </select>
-                        </div>
+                      <DayPickerReturn/>
+                    </div>
 
                     </div>  
                 </div>
@@ -58,7 +54,7 @@ function NewTripInput() {
 
             <div className="col-lg-6 col-sm-12">
                 <div className="row">   
-                    <div className="col-12">
+                    <div className="col-12 trip-name">
                         <input type="text" className="newtrip-form-control form-control" placeholder="Name your trip"/>
                     </div>     
                 </div>
