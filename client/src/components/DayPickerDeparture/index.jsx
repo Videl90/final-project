@@ -1,6 +1,6 @@
 import React from 'react';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
-import 'react-day-picker/lib/style.css';
+import '../DayPickerReturn/node_modules/react-day-picker/lib/style.css';
 import './styles.css';
 
 export default class MyForm extends React.Component {
