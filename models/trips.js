@@ -5,10 +5,14 @@ const Schema = mongoose.Schema;
 // Creating our User model
 const TripSchema = new Schema({
     // The email cannot be null, and must be a proper email before creation
-    destination: {
+    location: {
         type: String,
         required: true,
         unique: false,
+        trim: true
+    },
+    category: {
+        type: String,
         trim: true
     },
     // The password cannot be null
@@ -18,13 +22,14 @@ const TripSchema = new Schema({
         unique: false,
         trim: true
     },
-    date: {
+    departureDate: {
         type: String,
         required: true,
         trim: true
     },
-    category: {
+    arrivalDate: {
         type: String,
+        required: true,
         trim: true
     },
     tripName: {

@@ -1,6 +1,6 @@
 .emailInput, .passwordInput{
     border: 1px solid #81b6ff;
-    width: 98%;
+    width: 100%;
 }
 
 label {
@@ -43,3 +43,4 @@ label {
     text-decoration:none;
     text-align: left;
 }
+

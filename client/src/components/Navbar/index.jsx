@@ -3,7 +3,8 @@ import "./styles.css"
 import {Link} from "react-router-dom";
 import Button from "../Button"
 
-function Navbar(){
+function Navbar(props){
+    console.log("NAVBAR",props.id);
     return (
         <div className="container-fluid navbar">
             <nav class="navbar navbar-expand-lg">
@@ -27,7 +28,7 @@ function Navbar(){
                     <li class="nav-item">
                         <Button btnName="NEW TRIP">
                         <Link
-                            to="/newtrip"
+                            to={"/newtrip/" + props.id}
                             className = { window.location.pathname === "/newtrip"
                             ? "nav-link" : "nav-link" 
                             }>
