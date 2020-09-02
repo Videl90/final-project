@@ -1,5 +1,7 @@
 import React from "react";
 import "./styles.css";
+import DayPickerDeparture from "../DayPickerDeparture";
+import DayPickerReturn from "../DayPickerReturn";
 
 import DayPicker from 'react-day-picker/DayPickerInput';
 import 'react-day-picker/lib/style.css';
@@ -45,7 +47,7 @@ function NewTripInput(props) {
                         {/* <select className="custom-select newtrip-form-control" name="departure" id="inputGroupSelect01" {...props}>
                             <option>Departure Date</option>
                         </select> */}
-                        <DayPicker className="custom-select newtrip-form-control" name="arrival" id="inputGroupSelect01"/>
+                        <DayPickerDeparture className="custom-select newtrip-form-control" name="arrival" id="inputGroupSelect01"/>
                     </div>
 
                     </div>    
@@ -55,7 +57,7 @@ function NewTripInput(props) {
                     {/* <select className="custom-select newtrip-form-control" name="arrival" id="inputGroupSelect01" {...props}>
                         <option>Arrival Date</option>
                     </select> */}
-                        <DayPicker className="custom-select newtrip-form-control" name="arrival" id="inputGroupSelect01"/>
+                        <DayPickerReturn className="custom-select newtrip-form-control" name="arrival" id="inputGroupSelect01"/>
                       </div>
                     </div>  
                 </div>

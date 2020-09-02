@@ -48,7 +48,7 @@ function SignUp(){
                 onChange={handleSaveInfo}
                 handleSubmitForm={handleSubmitForm}
             /> 
-            {/* <Footer />  */}
+            <Footer /> 
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import NewTripInput from "../components/NewTripInput";
+import Flights from "../components/Flight";
 import Footer from "../components/Footer";
 
 function NewTrip(){
@@ -45,7 +46,8 @@ function NewTrip(){
                 onChange={handleTripInfo}
                 getFlights={getFlights}
             /> 
-            {/* <Footer />  */}
+            <Flights/>
+            <Footer /> 
         </div>
     )
 }
