@@ -1,0 +1,67 @@
+.flight-container{
+    border: 1px solid #81b6ff;
+    border-radius: 3px;
+    margin-left:30px;
+    padding-top: 50px;
+}
+
+.fa-plane-departure{
+    color: #81b6ff;
+}
+
+.hour{
+    font-size:24px;
+    color:#ff8023;
+}
+
+.country{
+    font-size:16px;
+    color: #81b6ff;
+    margin-top:-20px;
+}
+
+.flight-elements {
+    vertical-align: middle!important;
+}
+
+.duration{
+    font-size:16px;
+    color:#192433;
+    text-align:center;
+}
+
+.scale{
+    font-size:16px;
+    color:#ff8023;
+    margin-top:-20px;
+    text-align:center;
+}
+
+.priceInfo{
+    width: 150px;
+    height: 196px;
+    background-color: #192433;
+    color:#81b6ff;
+    border-radius: 3px;
+}
+
+.price {
+    font-size:24px;
+    color:#81b6ff;
+    font-weight:bold;
+    padding-top:30px;
+    text-align:center;
+}
+
+.general-content {
+    text-align:center;
+    padding-top:-30px;
+}
+
+.container {
+    max-width: 80%;
+}
+
+.selectBtn {
+    padding-left: 23px;
+}
