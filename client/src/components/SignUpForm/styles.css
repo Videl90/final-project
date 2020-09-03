@@ -47,15 +47,29 @@ label {
 .signupBtn {
     margin: 10px;
     background-color: #ff8023;
-    border-radius: 0.3em;
+    border-radius: 3px;
     float: right;
     border: none;
     padding: 5px;
     color: white;
 }
 
+.signupBtn:hover {
+   background-color:#192433;
+}
+
 .toLogin {
     margin: 5px auto;
+    color:#81b6ff;
+    font-size:15px;
+}
+
+.toLogin:hover {
+    color:#ff8023;
+}
+
+.toLogin-col {
+    padding-top: 15px;
 }
 
 .linkToSignup {

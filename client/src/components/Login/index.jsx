@@ -13,8 +13,14 @@ function LogInForm(props){
                 <div class="form-group">
                     <label for="exampleInputPassword1">PASSWORD</label>
                     <input type="password" class="form-control passwordInput" name="password" placeholder="Enter your password" id="exampleInputPassword1" {...props}></input>
-                    <button className="btn btn-primary" type="submit" value="SUBMIT">Submit</button>
-                    <a href="/" className="toLogin">Don't have an account?<span><strong> Register here</strong></span></a>
+                </div>
+                <div className="row">
+                    <div className="col-8 toLogin-col">
+                        <a href="/" className="toLogin">Don't have an account?<span><strong> Register </strong></span></a>
+                    </div>
+                    <div className="col-4">
+                        <button className="btn btn-primary" type="submit" value="SUBMIT">Submit</button>
+                    </div> 
                 </div>
             </form>
         </div>
