@@ -19,14 +19,11 @@ function LogInForm(props){
                         <a href="/" className="toLogin">Don't have an account?<span><strong> Register </strong></span></a>
                     </div>
                     <div className="col-4">
-                        <button className="btn btn-primary" type="submit" value="SUBMIT">Submit</button>
+                        <button className="btn btn-primary" type="submit" value="SUBMIT">SUBMIT</button>
                     </div> 
 
-                    <input type="password" class="form-control passwordInput" placeholder="Enter your password" id="exampleInputPassword1" ref={passwordRef}></input>
+                    {/*<input type="password" class="form-control passwordInput" placeholder="Enter your password" id="exampleInputPassword1" ref={passwordRef}></input>*/}
                   
-                </div>
-                <div class="form-group">
-                    <button className="btn btn-primary" type="submit" value="SUBMIT">Submit</button>
                 </div>
             </form>
         </div>

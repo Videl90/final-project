@@ -29,11 +29,8 @@ function SignUpForm(props){
                         <button className="signupBtn">SIGN UP</button>
                     </div>
                     
-                    <input type="password" className="form-control passwordInput2" ref={passwordRef} id="exampleInputPassword1" placeholder="Password"></input>
+                    {/*<input type="password" className="form-control passwordInput2" ref={passwordRef} id="exampleInputPassword1" placeholder="Password"></input>*/}
 
-                </div>
-                <div class="form-group">
-                    <button className="signupBtn">Sign Up</button>
                 </div>
                 {/*<input class="btn btn-primary" type="submit" value="SUBMIT"></input>*/}
                 {/* aqui funcion para enviar a otro lado*/}
