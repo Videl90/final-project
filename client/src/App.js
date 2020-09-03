@@ -16,7 +16,6 @@ function App() {
         <Switch>
         <Route exact path="/" component={SignUp} />
         <Route exact path="/login" component={Login} />
-
         <Route exact path="/newtrip/:id" component={NewTrip} />
         <Route exact path="/flight-results" component={FlightResults} />
         {/*<Route exact path="/agenda" component={Agenda} /> */}
