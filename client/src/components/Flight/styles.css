@@ -1,8 +1,12 @@
+.flights-container {
+    margin: 10px auto;
+}
+
 .flight-container{
     border: 1px solid #81b6ff;
     border-radius: 3px;
-    margin-left:30px;
-    padding-top: 50px;
+    margin: 10px auto;
+    padding: 50px;
 }
 
 .fa-plane-departure{
