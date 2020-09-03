@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import NewTripInput from "../components/NewTripInput";
+import Flights from "../components/Flight";
 import Footer from "../components/Footer";
 import Flights from "../components/Flight";
 import Wrapper from "../components/Wrapper";
@@ -57,7 +58,8 @@ function NewTrip(){
             <Flights />
             </Wrapper>
 
-            {/* <Footer />  */}
+            <Footer />
+
         </div>
     )
 }
