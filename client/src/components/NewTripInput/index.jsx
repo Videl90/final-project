@@ -1,8 +1,8 @@
 import React from "react";
 import "./styles.css";
-import 'react-day-picker/lib/style.css';
 import DayPickerDeparture from "../DayPickerDeparture";
 import DayPickerReturn from "../DayPickerReturn";
+import 'react-day-picker/lib/style.css';
 import Autocomplete from "../Autocomplete";
 
 function NewTripInput(props) {

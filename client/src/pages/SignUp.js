@@ -43,12 +43,12 @@ function SignUp(){
 
     return (
         <div>
-            <Navbar /> 
+            {/* <Navbar />  */}
             <SignUpForm 
                 onChange={handleSaveInfo}
                 handleSubmitForm={handleSubmitForm}
             /> 
-            {/* <Footer />  */}
+            <Footer /> 
         </div>
     )
 }

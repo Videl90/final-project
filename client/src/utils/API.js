@@ -9,6 +9,9 @@ export default {
   signup: function(userInfo) {
     return axios.post("/api/users/signup",userInfo);
   },
+  getUserInfo: function() {
+    return axios.get("/api/users/user/");
+  },
   getCities: function() {
     return axios.get("/api/cities/allcities");
   },
