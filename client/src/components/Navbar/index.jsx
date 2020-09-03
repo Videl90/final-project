@@ -13,7 +13,7 @@ function Navbar(props){
             <path stroke="#81b6ff" fill-rule="evenodd" d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
 </svg></span>
                 </button>
-                <div class="collapse navbar-collapse fixed-bottom" id="navbarNav">
+                <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                     <li class="nav-item">
                         <Button btnName="HOME">

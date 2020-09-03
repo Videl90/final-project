@@ -18,6 +18,7 @@ function SignUpForm(props){
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">PASSWORD</label>
+                  
                     <input type="password" className="form-control passwordInput2" name="password" id="exampleInputPassword1" placeholder="Password" {...props}></input>
                 </div>
                 <div className="row">
@@ -27,9 +28,16 @@ function SignUpForm(props){
                     <div className="col-4">
                         <button className="signupBtn">SIGN UP</button>
                     </div>
+                    
+                    <input type="password" className="form-control passwordInput2" ref={passwordRef} id="exampleInputPassword1" placeholder="Password"></input>
+
+                </div>
+                <div class="form-group">
+                    <button className="signupBtn">Sign Up</button>
                 </div>
                 {/*<input class="btn btn-primary" type="submit" value="SUBMIT"></input>*/}
                 {/* aqui funcion para enviar a otro lado*/}
+
             </form>
         </div>
     )

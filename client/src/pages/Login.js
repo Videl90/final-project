@@ -56,7 +56,7 @@ function Login(){
                 onChange={handleSaveInfo}
                 handleSubmitForm={handleSubmitForm}
             /> 
-            {/* <Footer />  */}
+            <Footer /> 
         </div>
     )
 }

@@ -21,6 +21,12 @@ function LogInForm(props){
                     <div className="col-4">
                         <button className="btn btn-primary" type="submit" value="SUBMIT">Submit</button>
                     </div> 
+
+                    <input type="password" class="form-control passwordInput" placeholder="Enter your password" id="exampleInputPassword1" ref={passwordRef}></input>
+                  
+                </div>
+                <div class="form-group">
+                    <button className="btn btn-primary" type="submit" value="SUBMIT">Submit</button>
                 </div>
             </form>
         </div>
