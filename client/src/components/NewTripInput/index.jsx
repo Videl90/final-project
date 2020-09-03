@@ -2,20 +2,27 @@ import React from "react";
 import "./styles.css";
 import DayPickerDeparture from "../DayPickerDeparture";
 import DayPickerReturn from "../DayPickerReturn";
-
-import DayPicker from 'react-day-picker/DayPickerInput';
 import 'react-day-picker/lib/style.css';
+import Autocomplete from "../Autocomplete";
 
 function NewTripInput(props) {
   return (
     <form className="form newtrip-container">
       <p className="newtrip-form-title">PLAN YOUR NEXT TRIP!</p>
         <div className="row">
-            <div className="col-lg-6 col-sm-12">
-                <input type="text" name="location" className="newtrip-form-control form-control" placeholder="Location" {...props}/>
+            <div className="col-lg-3 col-sm-6">
+                {/* <Autocomplete /> */}
+                <label for="staticEmail" class="col-sm-2 col-form-label">From</label>
+                <input type="text" name="origin" className="newtrip-form-control form-control" placeholder="Origin" {...props}/>
+            </div>
+            <div className="col-lg-3 col-sm-6">
+                {/* <Autocomplete /> */}
+                <label for="staticEmail" class="col-sm-2 col-form-label">To</label>
+                <input type="text" name="destination" className="newtrip-form-control form-control" placeholder="Destination" {...props}/>
             </div>
             <div className="col-lg-6 col-sm-12">
-            <div className="input-group mb-3">
+            {/* <div className="input-group mb-3"> */}
+            <label for="exampleFormControlSelect1">Select the category</label>
                 <select className="custom-select newtrip-form-control" name="category"  id="inputGroupSelect01" {...props}>
                 <option value="" disabled selected hidden>Category</option>
                 <option>Business</option>
@@ -23,13 +30,13 @@ function NewTripInput(props) {
                 </select>
                 </div>
             </div>
-        </div>
+        {/* </div> */}
 
         <div className="row">
             <div className="col-lg-6 col-sm-12">
                 <div className="row">
                     <div className="col-4">
-
+                    <label for="exampleFormControlSelect1">Number of People</label>
                         <div className="input-group mb-3">
                         <select className="custom-select newtrip-form-control" name="numberOfPeople" id="inputGroupSelect01" {...props}>
                             <option value="" disabled selected hidden>0</option>
@@ -67,6 +74,7 @@ function NewTripInput(props) {
                 <div className="row">   
 
                     <div className="col-12">
+                    <label for="exampleFormControlSelect1">Name of your trip</label>
                         <input type="text" className="newtrip-form-control form-control" name="tripname" placeholder="Name your trip" {...props}/>
                     </div>     
                 </div>

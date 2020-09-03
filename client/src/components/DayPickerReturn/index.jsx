@@ -21,7 +21,7 @@ export default class MyForm extends React.Component {
     return (
       <div>
         {selectedDay && <p >Day: {selectedDay.toLocaleDateString()}</p>}
-        {!selectedDay && <p className="departing">Returning</p>}
+        {!selectedDay && <p className="returning">Returning</p>}
         <DayPickerInput onDayChange={this.handleDayChange} />
       </div>
     );

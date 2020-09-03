@@ -49,9 +49,7 @@ function Login(){
 
     return (
         <div>
-            <Navbar 
-                id = {id}
-            /> 
+            {/* <Navbar />  */}
             <LogInForm 
                 onChange={handleSaveInfo}
                 handleSubmitForm={handleSubmitForm}
