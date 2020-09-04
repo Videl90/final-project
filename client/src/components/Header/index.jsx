@@ -3,7 +3,7 @@ import "./styles.css"
 
 function Header({ children }) {
     return (
-        <div className = "header container">
+        <div className = "container header">
              { children }
         </div>
     );
