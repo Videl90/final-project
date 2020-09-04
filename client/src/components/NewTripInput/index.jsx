@@ -2,6 +2,7 @@ import React from "react";
 import "./styles.css";
 import DayPickerDeparture from "../DayPickerDeparture";
 import DayPickerReturn from "../DayPickerReturn";
+import DayPickerReturn from 'react-day-picker/DayPickerInput';
 import 'react-day-picker/lib/style.css';
 import Autocomplete from "../Autocomplete";
 
@@ -11,6 +12,7 @@ function NewTripInput(props) {
         <form className="form newtrip-container">
             <p className="newtrip-form-title">PLAN YOUR NEXT TRIP!</p>
                 <div className="row">
+
                     <div className="col-lg-3 col-sm-6">
                         {/* <Autocomplete /> */}
                         <label for="staticEmail" class="col-sm-2 col-form-label">From</label>
@@ -32,6 +34,31 @@ function NewTripInput(props) {
                     </div>
                 </div>
                 {/* </div> */}
+
+                    <div className="col-4">
+                        <div className="input-group-prepend mb-3">
+                            <span class="input-group-text" id="basic-addon1">
+                                <i class="fas fa-user"></i>
+                            </span>
+                            <select className="custom-select newtrip-form-control" name="numberOfPeople" id="inputGroupSelect01" {...props}>
+                                <option value="" disabled selected hidden>0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>    
+                    <div className="col-4">
+
+                        <div className="finput-group mb-3">
+                            {/* <select className="custom-select newtrip-form-control" name="departure" id="inputGroupSelect01" {...props}>
+                                <option>Departure Date</option>
+                            </select> */}
+                            <DayPickerDeparture className="custom-select newtrip-form-control" name="arrival" id="inputGroupSelect01"/>
+                        </div>
+
 
                 <div className="row">
                     <div className="col-lg-6 col-sm-12">
@@ -62,12 +89,21 @@ function NewTripInput(props) {
                             <div className="col-4">
                             <div className="input-group mb-3">
 
+
                             {/* <select className="custom-select newtrip-form-control" name="arrival" id="inputGroupSelect01" {...props}>
                                 <option>Arrival Date</option>
                             </select> */}
                                 <DayPickerReturn className="custom-select newtrip-form-control" name="arrival" id="inputGroupSelect01" {...props}/>
                             </div>
                             </div>  
+
+                    <div className="col-12">
+                        <div className="input-group-prepend mb-3">
+                            <span class="input-group-text" id="basic-addon1">
+                                <i class="fas fa-pen-alt"></i>
+                            </span>
+                            <input type="text" className="newtrip-form-control form-control" name="tripname" placeholder="Name your trip" {...props}/>  
+
                         </div>
                     </div>     
 
