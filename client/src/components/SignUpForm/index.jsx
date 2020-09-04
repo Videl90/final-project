@@ -5,7 +5,6 @@ import "./styles.css";
 
 function SignUpForm(props){
     return (
-        <div className="container">
             <form className="form" onSubmit={props.handleSubmitForm}>
                 <p className="form-title">SIGN UP</p>
                 <div className="form-group">
@@ -28,7 +27,6 @@ function SignUpForm(props){
                 {/* aqui funcion para enviar a otro lado*/}
 
             </form>
-        </div>
     )
 }
 

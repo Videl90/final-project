@@ -3,14 +3,17 @@ import "./styles.css";
 import Button from "../Button";
 
 function Flights() {
+    //console.log(props);
   return (
     <>
-        <div className="row container flights-container">
-                <div className="col-9">
+    <div className="container resultsCont">
+        <div className="row flights-container">
+                <div className="col-10 col-lg-10 col-md-10 col-sm-12">
+
                     <div className="flight-container">
-                        <div className="row">
+                        <div className="row departureRow">
                             <div className="col" align="center">
-                                <p>LOGOLOGOLOGO</p>
+                                <p>LOGO</p>
                             </div>
                             <div className="col" align="center">
                                 <div>
@@ -34,9 +37,9 @@ function Flights() {
                                 <p className="scale">1 scale CDG</p>
                             </div>
                         </div>
-                        <div className="row">
+                        <div className="row arrivalRow">
                             <div className="col" align="center">
-                                <p>LOGOLOGOLOGO</p>
+                                <p>LOGO</p>
                             </div>
                             <div className="col" align="center">
                                 <div>
@@ -61,20 +64,19 @@ function Flights() {
                             </div>
                         </div>
                     </div>
-                    </div>
+                </div>
                     
-                <div className="col-3">
+                <div className="col-2 col-lg-2 col-md-2 col-sm-6 buttonCont">
                     <div className="priceInfo">
                         <p className="price">$23,456</p>
                         <p className="general-content">per person</p>
                         <div className="selectBtn">
-                            <Button btnName="SELECT"></Button>
+                            <Button className="selectButton" btnName="SELECT"></Button>
                         </div>
                     </div>
                 </div>
         </div>
-
-    
+        </div>
     </>
     
     );

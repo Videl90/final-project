@@ -1,5 +1,5 @@
 const cities = require("all-the-cities");
-console.log(cities);
+// console.log(cities);
 
 module.exports = {
     getCities: function(req, res) {

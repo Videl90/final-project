@@ -11,7 +11,8 @@ module.exports = {
       originLocationCode: 'SYD',
       destinationLocationCode: 'BKK',
       departureDate: '2020-10-01',
-      adults: '1'
+      returnDate: '2020-10-12',
+      // adults: '1'
     // }).then(function(response){
     //   return amadeus.booking.flightOrders.post(
     //     JSON.stringify({
