@@ -15,10 +15,9 @@ function NewTrip(){
         destination:"",
         category:"",
         numberOfPeople:"",
-        startDate:"",
         departureDate:"",
         arrivalDate:"",
-        tripName:"",
+        tripname:"",
         budget:""
     });
 
@@ -50,8 +49,10 @@ function NewTrip(){
         console.log(tripInfo);
     }
 
+
     function getFlights(event) {
         event.preventDefault();
+        console.log(tripInfo);
         API.lookFlights(tripInfo)
         .then(dbFlight => {
             console.log(dbFlight);

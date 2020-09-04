@@ -14,6 +14,13 @@ export default class MyForm extends React.Component {
 
   handleDayChange(day) {
     this.setState({ selectedDay: day });
+    const event = {
+      target: {
+        name: "arrivalDate",
+        value: day
+      }
+    }
+    this.props.onChange(event);
   }
 
   render() {
