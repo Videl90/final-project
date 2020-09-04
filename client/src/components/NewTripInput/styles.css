@@ -57,3 +57,11 @@
     padding-top:35px;
 }
 
+#basic-addon1 {
+    border-color: #81b6ff;
+    background-color:#ffffff;
+}
+
+.fa-search-location, .fa-list, .fa-user, .fa-pen-alt{
+    color: #ff8023;
+}
