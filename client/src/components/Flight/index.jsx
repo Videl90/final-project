@@ -5,7 +5,7 @@ import Button from "../Button";
 function Flights() {
   return (
     <>
-        <div className="row container">
+        <div className="row container flights-container">
                 <div className="col-9">
                     <div className="flight-container">
                         <div className="row">

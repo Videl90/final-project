@@ -13,6 +13,7 @@ function LogInForm(props){
                 <div class="form-group">
                     <label for="exampleInputPassword1">PASSWORD</label>
                     <input type="password" class="form-control passwordInput" name="password" placeholder="Enter your password" id="exampleInputPassword1" {...props}></input>
+
                 </div>
                 <div className="row">
                     <div className="col-8 toLogin-col">
@@ -23,7 +24,7 @@ function LogInForm(props){
                     </div> 
 
                     {/*<input type="password" class="form-control passwordInput" placeholder="Enter your password" id="exampleInputPassword1" ref={passwordRef}></input>*/}
-                  
+         
                 </div>
             </form>
         </div>

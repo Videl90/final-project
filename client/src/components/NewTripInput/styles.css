@@ -1,8 +1,7 @@
 .newtrip-container {
-    margin: 0 auto;
+    margin: 20px auto;
     background-color: #DDEFFF;
     width: 90%;
-    margin-top:100px;
     padding: 20px;
     padding-bottom: 60px;
 }
