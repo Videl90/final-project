@@ -18,7 +18,7 @@ function SignUpForm(props){
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">PASSWORD</label>
-                    <input type="password" className="form-control passwordInput2" ref={passwordRef} id="exampleInputPassword1" placeholder="Password"></input>
+                    <input type="password" className="form-control passwordInput2" name="password" id="exampleInputPassword1" placeholder="Password"></input>
                     <a href="/login" className="toLogin">Already a member?<span><strong> Log In</strong></span></a>
                 </div>
                 <div class="form-group">

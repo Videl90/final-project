@@ -12,7 +12,7 @@ function LogInForm(props){
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">PASSWORD</label>
-                    <input type="password" class="form-control passwordInput" placeholder="Enter your password" id="exampleInputPassword1" ref={passwordRef}></input>
+                    <input type="password" class="form-control passwordInput" name="password" placeholder="Enter your password" id="exampleInputPassword1" ></input>
                     <a href="/" className="toLogin">Don't have an account?<span><strong> Register here</strong></span></a>
                 </div>
                 <div class="form-group">
