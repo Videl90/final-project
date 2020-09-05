@@ -3,9 +3,7 @@ import "./styles.css"
 import {Link} from "react-router-dom";
 import Button from "../Button"
 
-function Navbar(props){
-    console.log("NAVBAR",props.id._id);
-    const userId = props.id._id;
+function Navbar(){
     return (
         <div className="container-fluid navbar">
             <nav class="navbar navbar-expand-lg">
@@ -30,8 +28,8 @@ function Navbar(props){
                     </li>
                     <li class="nav-item">
                         <Button btnName="NEW TRIP">
-                        <Link key={props.id._id}
-                            to={"/newtrip/" + userId}
+                        <Link 
+                            to="/newtrip"
                             className = { window.location.pathname === "/newtrip"
                             ? "nav-link" : "nav-link" 
                             }>

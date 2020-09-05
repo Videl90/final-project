@@ -2,13 +2,17 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import NewTripInput from "../components/NewTripInput";
-import Flights from "../components/Flight";
 import Footer from "../components/Footer";
-import Flight from "../components/Flight";
 import Wrapper from "../components/Wrapper";
 import API from "../utils/API";
+import FlightContext from "../utils/FlightContext";
+import APIContext from "../utils/APIContext";
+import { useHistory } from "react-router-dom";
+import Flights from "../components/Flight";
 
 function NewTrip(){
+
+    const history = useHistory();
 
     const [tripInfo, setTripInfo] = useState({
         origin:"", 
@@ -18,7 +22,12 @@ function NewTrip(){
         departureDate:"",
         arrivalDate:"",
         tripname:"",
-        budget:""
+        price:"",
+        children: 1,
+        travelClass: null,
+        nonStop: null,
+        currencyCode: "MXN",
+        maxPrice: null
     });
 
     const [flightInfo, setFlightInfo] = useState([]);
@@ -26,7 +35,7 @@ function NewTrip(){
     const [userInfo, setUserInfo] = useState({});
 
     useEffect(() => {
-        console.log(tripInfo);
+        // console.log(tripInfo);
         API.getUserInfo()
         .then(dbUser => {
             console.log(dbUser.data);
@@ -55,28 +64,35 @@ function NewTrip(){
         console.log(tripInfo);
         API.lookFlights(tripInfo)
         .then(dbFlight => {
-            console.log(dbFlight);
+            console.log(dbFlight.data);
+            setFlightInfo(dbFlight.data);
+            history.push({
+                pathname:"/flightresults"
+            });
+        })
+        .catch((error) => {
+            console.log(error);
         })
     }
 
     return (
         <div>
-            <Navbar 
-                id = {userInfo}
-            />
-            <Wrapper>
-                <Header>
-                    <h4>Welcome {userInfo.username}</h4>
-                </Header>
-                
-                <NewTripInput 
-                    onChange={handleTripInfo}
-                    getFlights={getFlights}
-                />
-                <Flight />
-            </Wrapper>
-            <Footer />
-
+            <FlightContext.Provider value= {{ tripInfo, setTripInfo }}>
+                <APIContext.Provider value= {{ flightInfo, setFlightInfo }}>
+                    <Navbar />
+                    <Wrapper>
+                        <Header>
+                            <h4>Welcome {userInfo.username}</h4>
+                        </Header>
+                        <NewTripInput 
+                            onChange={handleTripInfo}
+                            getFlights={getFlights}
+                        />
+                        {/* <Flights /> */}
+                    </Wrapper>
+                    <Footer />
+                </APIContext.Provider>
+            </FlightContext.Provider>
         </div>
     )
 }

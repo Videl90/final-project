@@ -8,11 +8,12 @@
 
 .newtrip-form-title{
     color: #0A1F30;
-    padding-top: 25px;
+    padding-top: 10px;
     text-align:center;
     font-weight: 600;
     font-stretch: extra-expanded;
     font-family: 'Montserrat', sans-serif;
+    margin-bottom: 25px;
 }
 
 .newtrip-form-control{
@@ -64,4 +65,8 @@
 
 .fa-search-location, .fa-list, .fa-user, .fa-pen-alt{
     color: #ff8023;
+}
+
+.firstRow {
+    margin-bottom: 20px;
 }

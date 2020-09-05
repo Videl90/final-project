@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-import Navbar from "../components/Navbar";
 import LogInForm from "../components/Login";
 import Footer from "../components/Footer";
 import { useHistory } from "react-router-dom";
@@ -39,7 +38,7 @@ function Login(){
             } else {
                 setId(result.data._id);
                 history.push({
-                    pathname:"/newtrip/" + result._id
+                    pathname:"/newtrip"
                 });
             }
 
