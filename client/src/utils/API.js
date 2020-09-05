@@ -16,6 +16,6 @@ export default {
     return axios.get("/api/cities/allcities");
   },
   lookFlights: function(flightInfo) {
-    return axios.get("/api/flightInfo/flight", flightInfo);
-  }
+    return axios.post("/api/flightInfo/flight", flightInfo);
+  },
 };

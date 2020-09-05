@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const amadeusController = require("../../controllers/amadeusController");
 
-router.route("/flight").get(amadeusController.test);
+router.route("/flight").post(amadeusController.test);
 
 module.exports = router;

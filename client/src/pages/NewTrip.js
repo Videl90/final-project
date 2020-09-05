@@ -15,14 +15,13 @@ function NewTrip(){
         destination:"",
         category:"",
         numberOfPeople:"",
-        startDate:"",
         departureDate:"",
         arrivalDate:"",
-        tripName:"",
+        tripname:"",
         budget:""
     });
 
-    const [flightInfo, setFlightInfo] = useState({});
+    const [flightInfo, setFlightInfo] = useState([]);
 
     const [userInfo, setUserInfo] = useState({});
 
@@ -37,7 +36,10 @@ function NewTrip(){
     }, []);
 
     function handleTripInfo(event) {
-        event.preventDefault();
+        console.log(event);
+        if (event.preventDefault) {
+            event.preventDefault();
+        }
         const value = event.target.value;
         console.log(event.target.name);
         setTripInfo({
@@ -47,9 +49,11 @@ function NewTrip(){
         console.log(tripInfo);
     }
 
+
     function getFlights(event) {
         event.preventDefault();
-        API.flightInfo(tripInfo)
+        console.log(tripInfo);
+        API.lookFlights(tripInfo)
         .then(dbFlight => {
             console.log(dbFlight);
         })
