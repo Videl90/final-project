@@ -6,6 +6,7 @@ const session = require("express-session");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 var bodyParser = require('body-parser');
+const MongoStore = require('connect-mongo')(session);
 
 require("dotenv").config();
 
@@ -21,7 +22,16 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 //Express session
-app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(session({ 
+  secret: "keyboard cat", 
+  resave: true, 
+  saveUninitialized: true,
+  store: new MongoStore({
+      mongooseConnection: mongoose.connection,
+      ttl: 24 * 60 * 60 // Keeps session open for 1 day
+    }) 
+  }
+));
 
 //Passport middleware
 app.use(passport.initialize());

@@ -1,6 +1,7 @@
 import React from 'react';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
 import './styles.css';
+import "react-day-picker/lib/style.css";
 
 export default class MyForm extends React.Component {
   constructor(props) {
@@ -13,6 +14,14 @@ export default class MyForm extends React.Component {
 
   handleDayChange(day) {
     this.setState({ selectedDay: day });
+    const event = {
+      target: {
+        name: "departureDate",
+        value: day
+      }
+    }
+    this.props.onChange(event);
+    // console.log({day,a,b,c});
   }
 
   render() {
@@ -20,8 +29,7 @@ export default class MyForm extends React.Component {
     return (
       <div>
         {selectedDay && <p >Day: {selectedDay.toLocaleDateString()}</p>}
-        {!selectedDay && <p className="departing">Departing</p>}
-        <DayPickerInput onDayChange={this.handleDayChange} />
+        <DayPickerInput placeholder="Departing" onDayChange={this.handleDayChange}/>
       </div>
     );
   }

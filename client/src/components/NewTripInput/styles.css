@@ -1,8 +1,7 @@
 .newtrip-container {
-    margin: 0 auto;
+    margin: 20px auto;
     background-color: #DDEFFF;
-    width: 90%;
-    margin-top:100px;
+    width: 100%;
     padding: 20px;
     padding-bottom: 60px;
 }
@@ -22,7 +21,7 @@
     width: 100%;
 }
 
-.form-group{
+.form-group-trip{
     margin: 40px ;
 }
 
@@ -58,3 +57,11 @@
     padding-top:35px;
 }
 
+#basic-addon1 {
+    border-color: #81b6ff;
+    background-color:#ffffff;
+}
+
+.fa-search-location, .fa-list, .fa-user, .fa-pen-alt{
+    color: #ff8023;
+}

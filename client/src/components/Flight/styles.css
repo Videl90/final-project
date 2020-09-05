@@ -1,8 +1,13 @@
+.flights-container {
+    /* margin: 10px auto; */
+    width: 100%;
+}
+
 .flight-container{
     border: 1px solid #81b6ff;
     border-radius: 3px;
-    margin-left:30px;
-    padding-top: 50px;
+    margin: 10px auto;
+    padding: 10px;
 }
 
 .fa-plane-departure{
@@ -33,35 +38,39 @@
 .scale{
     font-size:16px;
     color:#ff8023;
-    margin-top:-20px;
+    /* margin-top:-20px; */
     text-align:center;
 }
 
 .priceInfo{
-    width: 150px;
-    height: 196px;
+    width: 100%;
+    height: 100%;
     background-color: #192433;
     color:#81b6ff;
     border-radius: 3px;
 }
 
 .price {
-    font-size:24px;
+    font-size:18px;
     color:#81b6ff;
     font-weight:bold;
     padding-top:30px;
     text-align:center;
 }
 
-.general-content {
-    text-align:center;
-    padding-top:-30px;
+.buttonCont {
+    padding: 10px;
 }
 
-.container {
-    max-width: 80%;
+.general-content {
+    text-align:center;
 }
 
 .selectBtn {
-    padding-left: 23px;
+    margin: 0 auto;
+    width: 65%;
+}
+
+.selectButton {
+    text-align: center;
 }
