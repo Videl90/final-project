@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
 
-function MyTripsList() {
+function AgendaContainer() {
   return (
     <>
         <div className= "container agenda-container">
@@ -19,4 +19,4 @@ function MyTripsList() {
     );
 }
 
-export default MyTripsList;
+export default AgendaContainer;

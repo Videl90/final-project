@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Wrapper from "../components/Wrapper";
 import MyTrips from "../components/MyTrips";
 import AgendaContainer from "../components/AgendaContainer";
+import CurrencyExchange from "../components/CurrencyExchange";
 import Footer from "../components/Footer";
 import API from "../utils/API";
 
@@ -54,6 +55,7 @@ function Agenda(){
                 <MyTrips />
                 <AgendaContainer>
                 </AgendaContainer>
+                <CurrencyExchange />
             </Wrapper>
             <Footer /> 
         </div>
