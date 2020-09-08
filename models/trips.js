@@ -45,14 +45,29 @@ const TripSchema = new Schema({
         trim: true
     },
     price: {
-        type: Number
-    },
-    children: {
         type: Number,
-        unique: false,
+        trim: true
+    },
+    currency: {
+        type: String,
+        trim: true
+    },
+    departureTime: {
+        type: String,
+        trim: true
+    },
+    arrivalTime: {
+        type: String,
+        trim: true
+    },
+    departureTime2: {
+        type: String,
+        trim: true
+    },
+    arrivalTime2: {
+        type: String,
         trim: true
     }
-
 });
 
 const Trip = mongoose.model("Trip", TripSchema);

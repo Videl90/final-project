@@ -5,14 +5,11 @@ import NewTripInput from "../components/NewTripInput";
 import Footer from "../components/Footer";
 import Wrapper from "../components/Wrapper";
 import API from "../utils/API";
-import FlightContext from "../utils/FlightContext";
-import APIContext from "../utils/APIContext";
-import { useHistory } from "react-router-dom";
 import Flights from "../components/Flight";
+import Loading from "../components/loading";
+import Modal from "../components/Modal";
 
-function NewTrip(){
-
-    const history = useHistory();
+function NewTrip() {
 
     const [tripInfo, setTripInfo] = useState({
         origin:"", 
@@ -31,18 +28,19 @@ function NewTrip(){
     });
 
     const [flightInfo, setFlightInfo] = useState([]);
-
     const [userInfo, setUserInfo] = useState({});
+    const [loading, setLoading] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+    const [oneFlight, setOneFlight] = useState([]);
 
     useEffect(() => {
-        // console.log(tripInfo);
+        console.log(flightInfo);
         API.getUserInfo()
         .then(dbUser => {
             console.log(dbUser.data);
-            console.log(dbUser.data._id);
             setUserInfo(dbUser.data);
         })
-    }, []);
+    }, [flightInfo]);
 
     function handleTripInfo(event) {
         console.log(event);
@@ -58,41 +56,77 @@ function NewTrip(){
         console.log(tripInfo);
     }
 
+    function handleFlights(event) {
+        console.log(event.target.getAttribute('data-value'));
+        const id = event.target.getAttribute('data-value');
+        const oneFlight = flightInfo.filter(item => item.id == id);
+        console.log(oneFlight);
+        setOneFlight(oneFlight);
+        setShowModal(true);
+    }
 
     function getFlights(event) {
         event.preventDefault();
+        setLoading(true);
         console.log(tripInfo);
         API.lookFlights(tripInfo)
         .then(dbFlight => {
             console.log(dbFlight.data);
             setFlightInfo(dbFlight.data);
-            history.push({
-                pathname:"/flightresults"
-            });
+            console.log("NEW TRIP FILE",flightInfo);
+            setLoading(false);
         })
         .catch((error) => {
             console.log(error);
         })
     }
 
+    function handleHideModal() {
+        setShowModal(false);
+    }
+
+    function chooseFlight() {
+        console.log(oneFlight);
+        const additionalInfo = {
+            userId: userInfo._id,
+            price: oneFlight[0].price.total,
+            currency: oneFlight[0].price.currency,
+            duration: oneFlight[0].itineraries[0].duration,
+            departureTime: oneFlight[0].itineraries[0].segments[0].departure.at,
+            arrivalTime: oneFlight[0].itineraries[0].segments[(oneFlight[0].itineraries[0].segments.length) - 1].departure.at,
+            departureTime2: oneFlight[0].itineraries[1].segments[0].departure.at,
+            arrivalTime2: oneFlight[0].itineraries[1].segments[(oneFlight[0].itineraries[1].segments.length) - 1].departure.at
+        }
+        API.saveTrip({info: tripInfo, extraInfo: additionalInfo})
+        .then(dbTrip => {
+            console.log(dbTrip);
+        })
+    }
+
     return (
         <div>
-            <FlightContext.Provider value= {{ tripInfo, setTripInfo }}>
-                <APIContext.Provider value= {{ flightInfo, setFlightInfo }}>
-                    <Navbar />
-                    <Wrapper>
-                        <Header>
-                            <h4>Welcome {userInfo.username}</h4>
-                        </Header>
-                        <NewTripInput 
-                            onChange={handleTripInfo}
-                            getFlights={getFlights}
-                        />
-                        {/* <Flights /> */}
-                    </Wrapper>
-                    <Footer />
-                </APIContext.Provider>
-            </FlightContext.Provider>
+            <Navbar />
+            <Wrapper>
+                <Header>
+                    <h4>Welcome {userInfo.username}</h4>
+                </Header>
+                <NewTripInput 
+                    onChange={handleTripInfo}
+                    getFlights={getFlights}
+                />
+                {loading ? <Loading /> :
+                <Flights 
+                    flightInfo={flightInfo}
+                    handleFlights={handleFlights}
+                />}
+                <Modal 
+                    oneFlight = {oneFlight}
+                    show = {showModal}
+                    onHide = {handleHideModal}
+                    chooseFlight = {chooseFlight}
+                />
+            </Wrapper>
+            <Footer />
         </div>
     )
 }
