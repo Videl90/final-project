@@ -7,8 +7,7 @@ function CurrencyExchange() {
     <>
         <div className= "container currency-block">
             <div className= "row">
-                <div className= "col-lg-4 col-sm-12">
-                <div className="card">
+                <div className="col-12">
                     <h5 className="card-header currency-heading">CURRENCY EXCHANGE</h5>
                     <div className="card-body currency-data">
                         <div className="input-group">
@@ -23,7 +22,6 @@ function CurrencyExchange() {
                         </div>
                         </div>
                     </div>
-                </div>
                 </div>
             </div>
         </div>

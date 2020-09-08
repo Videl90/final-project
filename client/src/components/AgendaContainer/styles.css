@@ -16,4 +16,12 @@
     font-weight:400;
 }
 
+.card {
+    border: solid 1px #81b6ff;
+    border-radius: 3px;
+}
+
+.card-header{
+    width: 100%;
+}
 
