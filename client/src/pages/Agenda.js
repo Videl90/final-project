@@ -3,9 +3,13 @@ import Navbar from "../components/Navbar";
 import Wrapper from "../components/Wrapper";
 import MyTrips from "../components/MyTrips";
 import AgendaContainer from "../components/AgendaContainer";
+import Card from "../components/Card";
+import HotelCard from "../components/HotelCard";
+import FlightCard from "../components/FlightCard";
 import CurrencyExchange from "../components/CurrencyExchange";
 import Footer from "../components/Footer";
 import API from "../utils/API";
+
 
 function Agenda(){
 
@@ -52,10 +56,28 @@ function Agenda(){
                 id = {userInfo}
             />
             <Wrapper>
-                <MyTrips />
-                <AgendaContainer>
-                </AgendaContainer>
-                <CurrencyExchange />
+                <div className="row">
+                    <div className="col-3">
+                        <MyTrips/>
+                    </div>
+                    <div className="col-9">
+                        <AgendaContainer>
+                            <div className="row">
+                                <div className="col-8">
+                                    <Card>
+                                        <FlightCard/>
+                                    </Card>
+                                    <Card>
+                                        <HotelCard/>
+                                    </Card>
+                                </div>
+                                <div className="col-4">
+                                    <CurrencyExchange></CurrencyExchange>
+                                </div>
+                            </div>      
+                        </AgendaContainer>
+                    </div>
+                </div>
             </Wrapper>
             <Footer /> 
         </div>

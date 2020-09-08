@@ -1,18 +1,22 @@
 import React from "react";
 import "./styles.css";
+import Card from "../Card"; 
+import CurrencyExchange from "../CurrencyExchange";
+import FlightCard from "../FlightCard";
+import HotelCard from "../HotelCard";
 
-function AgendaContainer() {
+function AgendaContainer({children}) {
   return (
     <>
         <div className= "container agenda-container">
             <div className= "row">
-                <div className= "col-lg-9 col-sm-12">
-                <div className="card">
-                    <h5 className="card-header agenda-heading">AGENDA</h5>
+                <div className="col-12 card">
+                    <div className="card-header agenda-heading">AGENDA</div>
                     <div className="card-body agenda-content">
+                        {children}
                     </div>
                 </div>
-                </div>
+              
             </div>
         </div>
     </>
