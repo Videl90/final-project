@@ -1,27 +1,27 @@
 import React from "react";
 import "./styles.css";
-import Button from "../Button";
 
-function Flights() {
+function FlightDetails() {
   return (
     <>
         <div className= "container flight-detail">
-            <div className="row">
-                <p>FLIGHT DETAILS</p>
-                <p>Departure Date:</p>
-                <p>Agust 30th, 2020</p>
-                <p>19:40 MEX</p>
-                <p>Return Date:</p>
-                <p>November 15th, 2020</p>
-                <p>19:40 FRZ</p>
-                <p>LOGOLOGOLOGO</p>
-                <p>2 persons</p>
-                <p>Total: $46,300</p>
-            </div>
+                <p className="flight-heading">FLIGHT DETAILS</p>
+                <p className="date-title">Departure Date:</p>
+                <p className="departure-date">Agust 30th, 2020</p>
+                <p className="departure-hour">19:40 MEX</p>
+                <p className="date-title">Return Date:</p>
+                <p className="return-date">November 15th, 2020</p>
+                <p className="return-hour">19:40 FRZ</p>
+                <p className="airline-logo">LOGOLOGOLOGO</p>
+                <p className="number-people"> 
+                    <i className="fas fa-user" id="person"></i>
+                    2
+                </p>
+                <p className="total">Total: <span className="total-number">$46,300</span></p>
         </div>
     </>
     
     );
 }
 
-export default Flights;
+export default FlightDetails;

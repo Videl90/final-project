@@ -6,7 +6,7 @@ import Login from "./pages/Login";
 import NewTrip from "./pages/NewTrip";
 import FlightResults from "./pages/Flightresults";
 // import FlightResults from "./pages/FlightResults";
-// import Agenda from "./pages/Agenda";
+import Agenda from "./pages/Agenda";
 
 
 function App() {
