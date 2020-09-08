@@ -28,6 +28,7 @@ function LogInForm(props){
                 </div>
             </form>
         </div>
+    
     )
 }
 
