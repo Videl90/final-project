@@ -13,7 +13,7 @@ module.exports = {
     const retDate = req.body.arrivalDate;
     const newDepDate = depDate.split("T");
     const newRetDate = retDate.split("T");
-    console.log(newDepDate[0]);
+    console.log(typeof newDepDate[0]);
     console.log(newRetDate[0]);
     const code = () => { 
       const data = {
@@ -28,15 +28,21 @@ module.exports = {
         data.destinationCode = city.value
       }
     }) 
-    console.log(data); 
+    // console.log(data);
+    return data 
   };
-  code();
+  const iataCodes = code();
     amadeus.shopping.flightOffersSearch.get({
-    originLocationCode: req.body.originLocationCode,
-    destinationLocationCode: req.body.destinationLocationCode,
-    departureDate: req.body.departureDate,
-    returnDate: req.body.returnDate,
-    adults: req.body.adults
+    originLocationCode: iataCodes.originCode,
+    destinationLocationCode: iataCodes.destinationCode,
+    departureDate: newDepDate[0],
+    returnDate: newRetDate[0],
+    adults: req.body.numberOfPeople,
+    children: parseInt(req.body.children),
+    travelClass: req.body.class,
+    nonStop: req.body.directFlight,
+    currencyCode: req.body.currency
+    // maxPrice: req.body.maxPrice
     // }).then(function(response){
     //   return amadeus.booking.flightOrders.post(
     //     JSON.stringify({

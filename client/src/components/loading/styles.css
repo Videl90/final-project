@@ -1,0 +1,15 @@
+.imageCont {
+    margin: 10px auto;
+}
+
+.loading {
+    width: 50%;
+    height: auto;
+    text-align: center;
+    margin: 5px auto;
+}
+
+.loadingMsg {
+    margin-bottom: 5px;
+    text-align: center;
+}

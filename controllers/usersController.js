@@ -26,7 +26,7 @@ module.exports = {
             res.json({})
         } else {
             db.User.findOne({
-                _id: req.params.id
+                _id: req.user.id
             })
             .populate('trips')
             .then(user => {

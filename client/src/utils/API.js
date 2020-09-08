@@ -18,4 +18,7 @@ export default {
   lookFlights: function(flightInfo) {
     return axios.post("/api/flightInfo/flight", flightInfo);
   },
+  saveTrip: function(tripInfo) {
+    return axios.post("/api/trip/createTrip", tripInfo);
+  }
 };
