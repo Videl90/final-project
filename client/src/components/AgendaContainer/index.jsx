@@ -1,9 +1,5 @@
 import React from "react";
 import "./styles.css";
-import Card from "../Card"; 
-import CurrencyExchange from "../CurrencyExchange";
-import FlightCard from "../FlightCard";
-import HotelCard from "../HotelCard";
 
 function AgendaContainer({children}) {
   return (

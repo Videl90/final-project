@@ -16,10 +16,11 @@ function FlightCard() {
                                     <p className="hour query-text">19:40</p>
                                     <p className="country query-text">MEX</p>
                                 </div>
-                            </div>
-                            <div className="col" align="center">
-                                <div>
-                                    <i class="fas fa-plane-departure"></i>
+                                <div className="col" align="center">
+                                    <div>
+                                        <p className="hour">19:40</p>
+                                        <p className="country">MEX</p>
+                                    </div>
                                 </div>
                             </div>
                             <div className="col" align="center">
@@ -42,10 +43,9 @@ function FlightCard() {
                                     <p className="hour query-text">19:40</p>
                                     <p className="country query-text">MEX</p>
                                 </div>
-                            </div>
-                            <div className="col" align="center">
-                                <div>
-                                    <i class="fas fa-plane-departure"></i>
+                                <div className="col" align="center">
+                                    <p className="duration">14 h 30 m</p>
+                                    <p className="scale">1 scale CDG</p>
                                 </div>
                             </div>
                             <div className="col" align="center">

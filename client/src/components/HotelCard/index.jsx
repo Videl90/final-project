@@ -25,7 +25,10 @@ function HotelCard() {
                     </div>
                 </div>
             </div>
+                <div className="google-map"></div>
         </div>
+        </div>
+    </div>
     </>
     
     );
