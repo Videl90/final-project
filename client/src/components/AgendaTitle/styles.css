@@ -1,0 +1,21 @@
+.agenda-title{
+    background-color:#ff8023;
+    padding-top: 12px;
+}
+
+.agenda-date{
+    background-color: #81b6ff;
+    text-align:center;
+    padding-top: 12px;
+}
+
+.trip-type{
+    background-color: #192433;
+    text-align:center;
+    padding-top: 12px;
+}
+
+.title-info{
+    color:#ffffff;
+    font-weight: 600;
+}
