@@ -1,6 +1,6 @@
 .card-container{
     border: solid 1px #81b6ff;
-    margin-top:20px;
+    margin-top: 20px;
 }
 
 .card-title {
@@ -13,5 +13,5 @@
 
 .content {
     margin-left:-53px;
-    margin-top: 15px;
+    /* margin-top: 15px; */
 }

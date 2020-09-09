@@ -1,3 +1,10 @@
+.hotel-container{
+    /* margin-left: 50px;
+    margin-top: 40px; */
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 .google-map {
     height: 176px;
     background-color: #373737;
@@ -15,17 +22,21 @@
     border-radius: 3px 3px 0 0;
     background-color: #192433;
     color: #ffffff;
-    padding: 5px 0 5px 0;
+    padding: 5px 0 5px 26px;
+    margin-left: -1px;
+}
+
+.location-container-card {
+    color: #ffffff;
+    padding: 5px 10px 5px 10px;
     margin-left: -1px;
 }
 
 .mb-3, .my-3 {
     margin-bottom: 1rem!important;
+    margin-top: 15px;
     /* margin-left: 54px;
     width: 614px; */
-}
-
-.search-input {
 }
 
 .row {

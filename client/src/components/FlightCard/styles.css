@@ -1,4 +1,20 @@
 .flight-container-card{
      /* margin-left: 50px;
      margin-top: 40px; */
+     padding: 5px 10px 5px 10px;
 }
+
+.card-title-flight {
+     border-radius: 3px 3px 0 0;
+     background-color: #192433;
+     color: #ffffff;
+     padding: 5px 0 5px 26px;
+     margin-left: -1px;
+ }
+
+ .flights-container{
+     /* margin-left: 50px;
+     margin-top: 40px; */
+     padding-left: 0px;
+     padding-right: 0px;
+ }

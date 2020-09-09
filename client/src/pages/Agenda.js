@@ -64,7 +64,7 @@ function Agenda(){
                     <div className="col-lg-9 col-sm-12">
                         <AgendaContainer>
                             <div className="row">
-                                <div className="ol-lg-8 col-sm-12">
+                                <div className="col-lg-8 col-sm-12">
                                     <AgendaTitle></AgendaTitle>
                                     <Card>
                                         <FlightCard/>

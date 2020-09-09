@@ -16,6 +16,11 @@
     font-weight:400;
 }
 
+.container{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 .card {
     border: solid 1px #81b6ff;
     border-radius: 3px;
