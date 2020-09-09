@@ -1,45 +1,24 @@
-.hotel-container{
-    /* margin-left: 50px;
-    margin-top: 40px; */
-    padding-left: 0px;
-    padding-right: 0px;
+
+.hotel-container {
+    width: 100%;
 }
 
-.google-map {
-    height: 176px;
-    background-color: #373737;
-    margin-top: 15px;
-    /* margin-left: 37px; */
-    border-radius: 0 0 3px 3px;
+.google-maps {
+    height: 200px;
+    background-color: brown;
 }
 
-.card-container {
-    border: solid 1px #81b6ff;
-    border-radius: 3px;
+.input-row {
+    margin-bottom: 8px;
 }
 
-.card-title-location {
-    border-radius: 3px 3px 0 0;
-    background-color: #192433;
-    color: #ffffff;
-    padding: 5px 0 5px 26px;
-    margin-left: -1px;
+.fa-map-marker-alt {
+    color: #ff8023;
 }
 
-.location-container-card {
-    color: #ffffff;
-    padding: 5px 10px 5px 10px;
-    margin-left: -1px;
-}
-
-.mb-3, .my-3 {
-    margin-bottom: 1rem!important;
-    margin-top: 15px;
-    /* margin-left: 54px;
-    width: 614px; */
-}
-
-.row {
-    margin-right: -1px;
-    margin-left: -1px;
+@media (max-width: 575px) {
+    .col-xs-12 {
+        flex: 0 0 100%;
+        min-width: 100%;
+    }
 }

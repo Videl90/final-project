@@ -13,3 +13,39 @@
     margin-bottom: 5px;
     text-align: center;
 }
+
+@media (max-width: 1200px) {
+    .loadingMsg {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .loadingMsg {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .loadingMsg {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .loadingMsg {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    .loadingMsg {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    .loadingMsg {
+        font-size: 18px;
+    }
+}

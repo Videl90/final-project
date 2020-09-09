@@ -13,17 +13,32 @@ function NewTripInput(props) {
             <div className="row firstRow">
 
                 <div className="col-lg-3 col-sm-6">
+                <div className="input-group-prepend mb-3">
+                        <span class="input-group-text" id="basic-addon1">
+                            <i class="fas fa-plane-departure"></i>
+                        </span>
                     <input type="text" name="origin" className="newtrip-form-control form-control" placeholder="Origin" {...props}/>
+                    </div>
                 </div>
                 <div className="col-lg-3 col-sm-6">
+                <div className="input-group-prepend mb-3">
+                        <span class="input-group-text" id="basic-addon1">
+                            <i class="fas fa-plane-arrival"></i>
+                        </span>
                     <input type="text" name="destination" className="newtrip-form-control form-control" placeholder="Destination" {...props}/>
+                    </div>
                 </div>
                 <div className="col-lg-6 col-sm-12">
+                <div className="input-group-prepend mb-3">
+                        <span class="input-group-text" id="basic-addon1">
+                            <i class="fas fa-plane"></i>
+                        </span>
                         <select className="custom-select newtrip-form-control" name="category"  id="inputGroupSelect01" {...props}>
                         <option value="" disabled selected hidden>Category</option>
                         <option>Business</option>
                         <option>Vacation</option>
                         </select>
+                    </div>
                 </div>
             </div>
 
@@ -31,7 +46,11 @@ function NewTripInput(props) {
                 <div className="col-lg-6 col-sm-12">
                     <div className="row">
                         <div className="col-4">
-                                <div className="input-group mb-3">
+                                {/* <div className="input-group mb-3"> */}
+                                <div className="input-group-prepend mb-3">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <i class="fas fa-user-friends"></i>
+                                    </span>
                                     <select className="custom-select newtrip-form-control" name="numberOfPeople" id="inputGroupSelect01" {...props}>
                                         <option value="" disabled selected hidden>0</option>
                                         <option value="1">1</option>
@@ -55,7 +74,7 @@ function NewTripInput(props) {
                     </div>  
                 </div>
 
-                <div className="col-6 col-lg-6 col-md-12 col-sm-12">
+                <div className="col-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
                     <div className="input-group-prepend mb-3">
                         <span class="input-group-text" id="basic-addon1">
                             <i class="fas fa-pen-alt"></i>

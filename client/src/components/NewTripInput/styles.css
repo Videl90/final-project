@@ -70,3 +70,14 @@
 .firstRow {
     margin-bottom: 20px;
 }
+
+.fa-plane, .fa-user-friends, .fa-plane-departure, .fa-plane-arrival {
+    color: #ff8023 !important;
+}
+
+/* @media (max-width: 575px) {
+    .col-xs-10 {
+        flex: 0 0 100%;
+        min-width: %;
+    }
+} */
