@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Wrapper from "../components/Wrapper";
 import MyTrips from "../components/MyTrips";
 import AgendaContainer from "../components/AgendaContainer";
+import AgendaTitle from "../components/AgendaTitle"
 import Card from "../components/Card";
 import HotelCard from "../components/HotelCard";
 import FlightCard from "../components/FlightCard";
@@ -64,6 +65,7 @@ function Agenda(){
                         <AgendaContainer>
                             <div className="row">
                                 <div className="col-8">
+                                    <AgendaTitle></AgendaTitle>
                                     <Card>
                                         <FlightCard/>
                                     </Card>
