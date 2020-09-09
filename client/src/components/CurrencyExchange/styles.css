@@ -3,6 +3,10 @@
     padding: 12px;
 }
 
+.input-group-currency{
+    padding: 10px;
+}
+
 .currency-heading{
     background-color:#192433;
     color: white;

@@ -5,7 +5,7 @@ function FlightCard() {
   return (
     <>
         <div className="row container flights-container">
-                <div className="col-9">
+                <div className="col-12">
                     <div className="flight-container-card">
                         <div className="row">
                             <div className="col" align="center">

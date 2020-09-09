@@ -5,7 +5,7 @@ function HotelCard() {
   return (
     <>
         <div className="row container hotel-container">
-            <div className="col-lg-6">
+            <div className="col-lg-12">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">

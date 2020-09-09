@@ -57,13 +57,13 @@ function Agenda(){
             />
             <Wrapper>
                 <div className="row">
-                    <div className="col-3">
+                    <div className="col-lg-3 col-sm-12">
                         <MyTrips/>
                     </div>
-                    <div className="col-9">
+                    <div className="col-lg-9 col-sm-12">
                         <AgendaContainer>
                             <div className="row">
-                                <div className="col-8">
+                                <div className="col-lg-8 col-sm-12">
                                     <Card>
                                         <FlightCard/>
                                     </Card>
@@ -71,7 +71,7 @@ function Agenda(){
                                         <HotelCard/>
                                     </Card>
                                 </div>
-                                <div className="col-4">
+                                <div className="col-lg-4 col-sm-12">
                                     <CurrencyExchange></CurrencyExchange>
                                 </div>
                             </div>      
