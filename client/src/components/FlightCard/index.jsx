@@ -4,10 +4,10 @@ import "./styles.css";
 function FlightCard() {
   return (
     <>
-        <div className="row container flights-container">
-                <div className="col-9">
-                    <div className="flight-container-card">
-                        <div className="card-title">Flight Details</div>
+        <div className="row container">
+        <div className="col-12 flights-container">
+        <div className="card-title-flight">Flight Details</div>
+                <div className="flight-container-card">
                             <div className="row row-1">
                                 <div className="col" align="center">
                                     <p>LOGOLOGO</p>
@@ -60,7 +60,7 @@ function FlightCard() {
                                     <p className="scale">1 scale CDG</p>
                                 </div>
                             </div>
-                        </div>
+                    </div>
                     </div>
         </div>
 

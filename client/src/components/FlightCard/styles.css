@@ -1,24 +1,20 @@
 .flight-container-card{
-    width: 600px;
-    margin-left: 38px;
-    margin-top: -16px;
+     /* margin-left: 50px;
+     margin-top: 40px; */
+     padding: 5px 10px 5px 10px;
 }
 
-.row-1{
-        margin-top: 36px;
-        margin-left: 10px;
-}
+.card-title-flight {
+     border-radius: 3px 3px 0 0;
+     background-color: #192433;
+     color: #ffffff;
+     padding: 5px 0 5px 26px;
+     margin-left: -1px;
+ }
 
-.row-2 {
-    margin-left:10px;
-}
-
-.card-title {
-    border-radius: 3px 3px 0 0;
-    background-color: #192433;
-    height: 36px;
-    color:#ffffff;
-    padding: 5px 0 5px 26px;
-    margin-left: -1px;
-    width: 650px;
-}
+ .flights-container{
+     /* margin-left: 50px;
+     margin-top: 40px; */
+     padding-left: 0px;
+     padding-right: 0px;
+ }
