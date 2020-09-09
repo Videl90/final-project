@@ -14,14 +14,16 @@
     height: 283px;
 }
 
-.card-title {
+.card-title-location {
     border-radius: 3px 3px 0 0;
     background-color: #192433;
     width: 650px;
     height: 36px;
     color: #ffffff;
     padding: 5px 0 5px 26px;
-    margin-left: -1px;
+    margin-left: 37px;
+    margin-top: -15px;
+    margin-bottom: 16px;
 }
 
 .mb-3, .my-3 {
@@ -33,3 +35,4 @@
 .search-input {
     width:600px;
 }
+
