@@ -13,22 +13,10 @@ import API from "../utils/API";
 
 function Agenda(){
 
-    const [tripInfo, setTripInfo] = useState({
-        origin:"", 
-        destination:"",
-        category:"",
-        numberOfPeople:"",
-        departureDate:"",
-        arrivalDate:"",
-        tripname:"",
-        budget:""
-    });
-
-    const [userInfo, setUserInfo] = useState({});
+    const [userInfo, setUserInfo] = useState([]);
 
     useEffect(() => {
-        console.log(tripInfo);
-        API.getUserInfo()
+        API.userTrips()
         .then(dbUser => {
             console.log(dbUser.data);
             console.log(dbUser.data._id);
@@ -36,44 +24,39 @@ function Agenda(){
         })
     }, []);
 
-    // function handleTripInfo(event) {
-    //     console.log(event);
-    //     if (event.preventDefault) {
-    //         event.preventDefault();
-    //     }
-    //     const value = event.target.value;
-    //     console.log(event.target.name);
-    //     setTripInfo({
-    //         ...tripInfo,
-    //         [event.target.name]: value
-    //     });
-    //     console.log(tripInfo);
-    // }
+    function filterFlight() {
+        console.log("HOLA");
+    }
 
     return (
         <div>
-            <Navbar 
-                id = {userInfo}
-            />
+            <Navbar />
             <Wrapper>
                 <div className="row">
-                    <div className="col-3">
-                        <MyTrips/>
+                    <div className="col-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                        <MyTrips
+                            tripsInfo = {userInfo}
+                            filterFlight = {filterFlight}
+                        />
                     </div>
-                    <div className="col-9">
+                    <div className="col-9 col-lg-9 col-md-12 col-sm-12 col-xs-12">
                         <AgendaContainer>
                             <div className="row">
-                                <div className="col-8">
-                                    <Card>
-                                        <FlightCard/>
-                                    </Card>
-                                    <Card>
-                                        <HotelCard/>
-                                    </Card>
+                                <div className="col-12 col-lg-12 col-md-12 col-sm-12">
+                                        <FlightCard
+                                            
+                                        />
                                 </div>
-                                <div className="col-4">
-                                    <CurrencyExchange></CurrencyExchange>
-                                </div>
+                                    {/* <div className="col-3 col-lg-3 col-md-12 col-sm-12">
+                                        <CurrencyExchange>
+
+                                        </CurrencyExchange>
+                                    </div> */}
+                            </div>
+                            <div className="row">
+                                    <HotelCard
+                                    
+                                    />
                             </div>      
                         </AgendaContainer>
                     </div>

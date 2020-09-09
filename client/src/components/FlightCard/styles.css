@@ -1,5 +1,15 @@
-.flight-container-card{
-    width: 600px;
-     margin-left: 50px;
-     margin-top: 40px;
+.flights-container{
+    width: 80%px;
+}
+
+@media (max-width: 768px) {
+    .query-text {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .query-text {
+        font-size: 12px;
+    }
 }

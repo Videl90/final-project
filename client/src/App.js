@@ -19,7 +19,7 @@ function App() {
         <Route exact path="/login" component={Login} />
         <Route exact path="/newtrip" component={NewTrip} />
         <Route exact path="/flightresults" component={FlightResults} />
-        {/*<Route exact path="/agenda" component={Agenda} /> */}
+        <Route exact path="/agenda" component={Agenda} />
         </Switch>
       </div>
     </Router>

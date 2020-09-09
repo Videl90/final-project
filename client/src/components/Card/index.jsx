@@ -3,7 +3,7 @@ import "./styles.css";
  
 function Card(props){
     return (
-        <div className="card-container">
+        <div className="card-container container">
             <div className="row card-title"></div>
             <div className="row content">
                 {props.children}
