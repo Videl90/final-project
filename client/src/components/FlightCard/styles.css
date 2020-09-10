@@ -1,24 +1,17 @@
-.flight-container-card{
-    width: 600px;
-    margin-left: 38px;
-    margin-top: -16px;
+
+.flights-container{
+    width: 80%px;
 }
 
-.row-1{
-        margin-top: 36px;
-        margin-left: 10px;
+@media (max-width: 768px) {
+    .query-text {
+        font-size: 14px;
+    }
 }
 
-.row-2 {
-    margin-left:10px;
+@media (max-width: 576px) {
+    .query-text {
+        font-size: 12px;
+    }
 }
 
-.card-title {
-    border-radius: 3px 3px 0 0;
-    background-color: #192433;
-    height: 36px;
-    color:#ffffff;
-    padding: 5px 0 5px 26px;
-    margin-left: -1px;
-    width: 650px;
-}

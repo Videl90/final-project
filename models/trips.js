@@ -44,8 +44,29 @@ const TripSchema = new Schema({
         unique: false,
         trim: true
     },
-    budget: {
-        type: Number
+    price: {
+        type: Number,
+        trim: true
+    },
+    currency: {
+        type: String,
+        trim: true
+    },
+    departureTime: {
+        type: String,
+        trim: true
+    },
+    arrivalTime: {
+        type: String,
+        trim: true
+    },
+    departureTime2: {
+        type: String,
+        trim: true
+    },
+    arrivalTime2: {
+        type: String,
+        trim: true
     }
 });
 

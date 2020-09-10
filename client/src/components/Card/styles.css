@@ -1,12 +1,17 @@
 .card-container{
     border: solid 1px #81b6ff;
-    border-radius: 3px;
-    width:650px;
-    height:200px;
-    margin-top:20px;
+    margin-top: 20px;
+}
+
+.card-title {
+    border-radius: 3px 3px 0 0;
+    background-color: #192433;
+    height: 36px;
+    color:#ffffff;
+    margin-left: -1px;
 }
 
 .content {
     margin-left:-53px;
-    margin-top: 15px;
+    /* margin-top: 15px; */
 }

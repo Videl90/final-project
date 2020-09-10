@@ -8,11 +8,12 @@
 
 .newtrip-form-title{
     color: #0A1F30;
-    padding-top: 25px;
+    padding-top: 10px;
     text-align:center;
     font-weight: 600;
     font-stretch: extra-expanded;
     font-family: 'Montserrat', sans-serif;
+    margin-bottom: 25px;
 }
 
 .newtrip-form-control{
@@ -65,3 +66,18 @@
 .fa-search-location, .fa-list, .fa-user, .fa-pen-alt{
     color: #ff8023;
 }
+
+.firstRow {
+    margin-bottom: 20px;
+}
+
+.fa-plane, .fa-user-friends, .fa-plane-departure, .fa-plane-arrival {
+    color: #ff8023 !important;
+}
+
+/* @media (max-width: 575px) {
+    .col-xs-10 {
+        flex: 0 0 100%;
+        min-width: %;
+    }
+} */

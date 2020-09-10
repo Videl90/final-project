@@ -4,7 +4,7 @@ import "./styles.css";
 function FlightDetails() {
   return (
     <>
-        <div className= "container flight-detail">
+        <div className= "details-cont">
                 <p className="flight-heading">FLIGHT DETAILS</p>
                 <p className="date-title">Departure Date:</p>
                 <p className="departure-date">Agust 30th, 2020</p>

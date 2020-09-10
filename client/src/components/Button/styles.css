@@ -3,8 +3,8 @@
     background-color: transparent;
     background-image: none;
     border-color: #ff8023;
-    margin: 10px;
-    font-weight: 600;
+    /* margin: 10px; */
+    font-weight: 300;
 }
 
 .btn-outline-primary:hover {

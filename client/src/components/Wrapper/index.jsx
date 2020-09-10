@@ -3,7 +3,7 @@ import "./style.css"
 
 function Wrapper({ children }) {
     return (
-        <div className = "wrapper">
+        <div className = "wrapper container-fluid">
              { children }
         </div>
     );

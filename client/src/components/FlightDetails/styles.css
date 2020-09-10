@@ -1,7 +1,6 @@
-.flight-detail{
-    border: solid 1px #ff8023;
+.details-cont{
+    border: solid 1px black;
     border-radius: 3px;
-    width: 300px;
 }
 
 .flight-heading{
