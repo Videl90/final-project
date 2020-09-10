@@ -118,7 +118,7 @@ function Flights(props) {
                     </div>
                 </div>
             </div>
-                )
+            )
             }) 
         ) : (
             <></>

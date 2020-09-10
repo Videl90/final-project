@@ -31,6 +31,10 @@ module.exports = {
     },
 
     getTrips: function(req,res) {
-        res.json("TRIPS");
+        db.Trip.find()
+        .populate('checklist')
+        .then(dbTrips => {
+            res.json(dbTrips);
+        })
     }
 }

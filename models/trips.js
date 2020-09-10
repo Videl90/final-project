@@ -67,7 +67,21 @@ const TripSchema = new Schema({
     arrivalTime2: {
         type: String,
         trim: true
-    }
+    },
+    airlineDeparture: {
+        type: String,
+        trim: true
+    },
+    airlineArrival: {
+        type: String,
+        trim: true
+    },
+    checklist: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Baggage"
+        }
+    ]
 });
 
 const Trip = mongoose.model("Trip", TripSchema);

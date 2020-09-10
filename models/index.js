@@ -1,5 +1,6 @@
 module.exports = {
     User: require("./user"),
-    Trip: require("./trips")
+    Trip: require("./trips"),
+    Baggage: require("./checklist")
 };
   

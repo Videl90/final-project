@@ -23,5 +23,8 @@ export default {
   },
   userTrips: function() {
     return axios.get("/api/users/userTrip");
+  },
+  checkList: function(baggageInfo) {
+    return axios.post("/api/baggage/checklist", baggageInfo);
   }
 };
