@@ -6,7 +6,7 @@ import {
 } from 'react-google-maps';
 import Autocomplete from 'react-google-autocomplete';
 import Geocode from "react-geocode";
-import credentials from '../../credentials';
+import credentials from "../../credentials";
 const mapURL = credentials.mapsKey
 
 Geocode.setApiKey(mapURL);
