@@ -28,7 +28,7 @@ function Flights(props) {
         <>
         {/* <h1>Hola</h1> */}
         {props.flightInfo.length !== 0 ? (
-            props.flightInfo.map(({ id, itineraries, oneWay, price }) => {
+            props.flightInfo.map(({ id, itineraries, oneWay, price, travelerPricings }) => {
                 return (
                     <div className="container resultsCont">
                         <div className="row flights-container">
@@ -36,22 +36,22 @@ function Flights(props) {
 
                             <div className="flight-container">
                             <div className="row">
-                            <div className="col tripHeader">
-                                <strong><p className="query-text2">Airline</p></strong>
+                                <div className="col tripHeader">
+                                    <strong><p className="query-text2">Airline</p></strong>
+                                </div>
+                                <div className="col tripHeader">
+                                    <strong><p className="query-text2">Departure</p></strong>
+                                </div>
+                                <div className="col tripHeader">
+                                    
+                                </div>
+                                <div className="col tripHeader">
+                                    <strong><p className="query-text2">Arrival</p></strong>
+                                </div>
+                                <div className="col tripHeader">
+                                    <strong><p className="query-text2">Duration</p></strong>
+                                </div>
                             </div>
-                            <div className="col tripHeader">
-                                <strong><p className="query-text2">Departure</p></strong>
-                            </div>
-                            <div className="col tripHeader">
-                                
-                            </div>
-                            <div className="col tripHeader">
-                                <strong><p className="query-text2">Arrival</p></strong>
-                            </div>
-                            <div className="col tripHeader">
-                                <strong><p className="query-text2">Duration</p></strong>
-                            </div>
-                        </div>
                                 <div className="row departureRow">
                                     <div className="col" align="center">
                                         <p className="query-text2">{itineraries[0].segments[0].carrierCode}</p>
@@ -109,7 +109,7 @@ function Flights(props) {
                         
                     <div className="col-2 col-lg-2 col-md-3 col-sm-2 col-xs-4 buttonCont">
                         <div className="priceInfo">
-                            <p className="price query-text2">{price.total} {price.currency}</p>
+                            <p className="price query-text2">{travelerPricings[0].price.total * 2} {price.currency}</p>
                             <p className="general-content query-text2">per person</p>
                             <div className="selectBtn">
                                 <button type="button" class="btn btn-outline-primary " onClick={props.handleFlights} data-toggle="modal" data-value={id} data-target="#staticBackdrop">Details</button>

@@ -74,6 +74,7 @@ function ModalProject (props) {
                 <Col xs={6} md={6}>
                 <p><strong>Adult Price:</strong> {flight.travelerPricings[0].price.total * 2} {flight.price.currency}</p>
                 <p><strong>Child Price:</strong> {flight.travelerPricings[1].price.total * 2} {flight.price.currency}</p>
+                <p><strong>Total:</strong> {flight.price.total} {flight.price.currency}</p>
                 </Col>
             </Row>   
         </Container>

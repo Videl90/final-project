@@ -8,24 +8,42 @@ import LocationCard from "../components/LocationCard";
 import FlightCard from "../components/FlightCard";
 import Footer from "../components/Footer";
 import API from "../utils/API";
+import Modal from "../components/ModalChecklist";
 
 
 
 function Agenda(){
 
-    const [userInfo, setUserInfo] = useState([]);
+    const [trip, setTrip] = useState([]);
+
+    const [oneTrip, setOneTrip] = useState([]);
+
+    const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
-        API.userTrips()
-        .then(dbUser => {
-            console.log(dbUser.data);
-            console.log(dbUser.data._id);
-            setUserInfo(dbUser.data);
+        API.allTrips()
+        .then(dbTrips => {
+            console.log(dbTrips.data);
+            setTrip(dbTrips.data);
         })
     }, []);
 
-    function filterFlight() {
+    function filterFlight(event) {
+        event.preventDefault();
+        let tripId = event.target.getAttribute('data-value');
+        const filterTrip = trip.filter(item => item._id == tripId);
+        console.log(filterTrip);
+        setOneTrip(filterTrip);
+    }
+
+    function getChecklist(event) {
+        event.preventDefault();
         console.log("HOLA");
+        setShowModal(true);
+    }
+
+    function handleHideModal() {
+        setShowModal(false);
     }
 
     return (
@@ -33,19 +51,20 @@ function Agenda(){
             <Navbar />
             <Wrapper>
                 <div className="row">
-                    <div className="col-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                    <div className="col-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
                         <MyTrips
-                            tripsInfo = {userInfo}
+                            tripsInfo = {trip}
                             filterFlight = {filterFlight}
+                            getChecklist = {getChecklist}
                         />
                     </div>
-                    <div className="col-9 col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                    <div className="col-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
                         <AgendaContainer>
                             <div className="row">
                                 <div className="col-12 col-lg-12 col-md-12 col-sm-12">
                                         <AgendaTitle/>
                                         <FlightCard
-                                            
+                                            flight = {oneTrip}
                                         />
                                 </div>
                                     {/* <div className="col-3 col-lg-3 col-md-12 col-sm-12">
@@ -62,6 +81,11 @@ function Agenda(){
                         </AgendaContainer>
                     </div>
                 </div>
+                <Modal 
+                    oneList = {oneTrip}
+                    show = {showModal}
+                    onHide = {handleHideModal}
+                />
             </Wrapper>
             <Footer /> 
         </div>
