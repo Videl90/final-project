@@ -18,7 +18,15 @@ module.exports = {
             departureTime: req.body.extraInfo.departureTime,
             arrivalTime: req.body.extraInfo.arrivalTime,
             departureTime2: req.body.extraInfo.departureTime2,
-            arrivalTime2: req.body.extraInfo.arrivalTime2
+            arrivalTime2: req.body.extraInfo.arrivalTime2,
+            airlineDeparture: req.body.extraInfo.airlineDeparture,
+            airlineArrival: req.body.extraInfo.airlineArrival,
+            durationDepart: req.body.extraInfo.durationDepart,
+            durationArr: req.body.extraInfo.durationArr,
+            iataDeparture: req.body.extraInfo.iataDeparture,
+            iataArrival: req.body.extraInfo.iataArrival,
+            iataDeparture2: req.body.extraInfo.iataDeparture2,
+            iataArrival2: req.body.extraInfo.iataArrival2
         })
         .then(({_id}) => {
             console.log("TRIPID",_id);

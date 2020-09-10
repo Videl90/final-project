@@ -1,0 +1,19 @@
+table { 
+    width: 80%;
+    border-bottom: 1px solid black;
+    margin: 5px auto;
+}
+
+th, tbody {
+    text-align: center;
+    width: 100%;
+}
+
+tr:nth-child(even) {
+    background-color: #ffe281;
+}
+
+tr {
+    border-bottom: solid 1px black;
+    width: 100%;
+}

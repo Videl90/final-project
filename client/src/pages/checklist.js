@@ -5,10 +5,13 @@ import Header from "../components/Header";
 import List from "../components/List";
 import Footer from "../components/Footer";
 import API from "../utils/API";
+import { useHistory } from "react-router-dom";
 
 let array = [];
 
 function Checklist() {
+    
+    const history = useHistory();
 
     const inputRef = useRef();
 
@@ -59,6 +62,9 @@ function Checklist() {
         API.checkList({ id: tripId, baggage: list })
         .then(dbBaggage => {
             console.log(dbBaggage);
+            history.push({
+                pathname:"/agenda"
+            });
         })
     }
 

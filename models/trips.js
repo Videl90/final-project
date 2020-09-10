@@ -76,6 +76,30 @@ const TripSchema = new Schema({
         type: String,
         trim: true
     },
+    durationDepart: {
+        type: String,
+        trim: true
+    },
+    durationArr: {
+        type: String,
+        trim: true
+    },
+    iataDeparture: {
+        type: String,
+        trim: true
+    },
+    iataArrival: {
+        type: String,
+        trim: true
+    },
+    iataDeparture2: {
+        type: String,
+        trim: true
+    },
+    iataArrival2: {
+        type: String,
+        trim: true
+    },
     checklist: [
         {
             type: Schema.Types.ObjectId,
