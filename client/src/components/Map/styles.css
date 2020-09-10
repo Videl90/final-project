@@ -17,3 +17,7 @@
     z-index: 1 !important;
     padding: 6px;
 }
+
+.mapboxgl-ctrl-geocoder--icon{
+    color:#FF8023!important;
+}

@@ -1,45 +1,59 @@
-import React from 'react';
-import mapboxgl from 'mapbox-gl';
-import './styles.css'
+import React, { useState, useRef, useCallback } from 'react'
+import MapGL from 'react-map-gl'
+import Geocoder from 'react-map-gl-geocoder'
+import 'mapbox-gl/dist/mapbox-gl.css'
+import 'react-map-gl-geocoder/dist/mapbox-gl-geocoder.css' 
 
-mapboxgl.accessToken = 'pk.eyJ1IjoidmlkZWw5MCIsImEiOiJja2V3Y3dtejQzZ3o3MnJtc3I5end6cnViIn0.6yRF57wgKckZmnVfOaUEhA';
+const MAPBOX_TOKEN = 'pk.eyJ1IjoidmlkZWw5MCIsImEiOiJja2V3MjNkNWswZ2VlMnhueHhnaDJwdGRoIn0.TQT1TtsKgP3VhcnzHvUDZA';
+ 
+const Map = () => {
+  
+  const [viewport, setViewport] = useState({
+    latitude: 19.421949,
+    longitude: -99.134391,
+    zoom: 11
+  });
+  
+  const mapRef = useRef();
 
-class Application extends React.Component {
-    // Code from the next few steps will go here
-    constructor(props) {
-        super(props);
-        this.state = {
-        lng: 5,
-        lat: 34,
-        zoom: 2
-        };
-    }
-    componentDidMount() {
-        const map = new mapboxgl.Map({
-        container: this.mapContainer,
-        style: 'mapbox://styles/mapbox/streets-v11',
-        center: [this.state.lng, this.state.lat],
-        zoom: this.state.zoom
-        });
-        map.on('move', () => {
-            this.setState({
-                lng: map.getCenter().lng.toFixed(4),
-                lat: map.getCenter().lat.toFixed(4),
-                zoom: map.getZoom().toFixed(2)
-            });
-        });
-    }
-    render() {
-        return (
-            <div>
-                <div className='sidebarStyle'>
-                    <div>Longitude: {this.state.lng} | Latitude: {this.state.lat} | Zoom: {this.state.zoom}</div>
-                </div>
-                <div ref={el => this.mapContainer = el} className="mapContainer" />
-            </div>
-        )
-    }
-}
-     
+  const handleViewportChange = useCallback(
+    (newViewport) => setViewport(newViewport),
+    []
+  );
+ 
+  const handleGeocoderViewportChange = useCallback( (newViewport) => {
+      const geocoderDefaultOverrides = { transitionDuration: 1000 };
 
-export default Application;
+      return handleViewportChange({
+        ...newViewport,
+        ...geocoderDefaultOverrides
+      });
+     },
+    []
+  );
+ 
+  return (
+    <div style={{ height: "50vh" }}>
+      <MapGL
+        ref={mapRef}
+        {...viewport}
+        width="100%"
+        height="200px"
+        onViewportChange={handleViewportChange}
+        mapStyle="mapbox://styles/videl90/ckex2tjbe006a1aqpspx6eduu"
+        mapboxApiAccessToken={MAPBOX_TOKEN}
+      >
+        <Geocoder
+          mapRef={mapRef}
+          width="1000px"
+          border="solid 1px#FF8023"
+          onViewportChange={handleGeocoderViewportChange}
+          mapboxApiAccessToken={MAPBOX_TOKEN}
+          position="top-left"
+        />
+      </MapGL>
+    </div>
+  );
+};
+ 
+export default Map;
