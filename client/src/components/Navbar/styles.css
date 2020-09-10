@@ -1,15 +1,14 @@
 .navbar{
     background-color: none;
     background-image: url("../../assets/nav.png");
-    height: 85px;
+    height: 98px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
+    margin-bottom: 30px;
 }
 
-.nav-item{
-    margin-top:-20px;
-}
+
 
 .navbar-expand-lg{
     height:35px;

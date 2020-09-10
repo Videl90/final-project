@@ -18,7 +18,7 @@ function Navbar(){
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                     <li className="nav-item">
-                        <Button btnName="HOME">
+                        <Button btnName="NEW TRIP">
                         <Link
                             to="/"
                             className = { window.location.pathname === "/"
@@ -28,7 +28,7 @@ function Navbar(){
                         </Button>
                     </li>
                     <li class="nav-item">
-                        <Button btnName="NEW TRIP">
+                        <Button btnName="AGENDA">
                         <Link 
                             to="/newtrip"
                             className = { window.location.pathname === "/newtrip"

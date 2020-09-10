@@ -4,12 +4,11 @@ import Wrapper from "../components/Wrapper";
 import MyTrips from "../components/MyTrips";
 import AgendaContainer from "../components/AgendaContainer";
 import AgendaTitle from "../components/AgendaTitle"
-import Card from "../components/Card";
-import HotelCard from "../components/HotelCard";
+import LocationCard from "../components/LocationCard";
 import FlightCard from "../components/FlightCard";
-import CurrencyExchange from "../components/CurrencyExchange";
 import Footer from "../components/Footer";
 import API from "../utils/API";
+
 
 
 function Agenda(){
@@ -44,6 +43,7 @@ function Agenda(){
                         <AgendaContainer>
                             <div className="row">
                                 <div className="col-12 col-lg-12 col-md-12 col-sm-12">
+                                        <AgendaTitle/>
                                         <FlightCard
                                             
                                         />
@@ -55,7 +55,7 @@ function Agenda(){
                                     </div> */}
                             </div>
                             <div className="row">
-                                    <HotelCard
+                                    <LocationCard
                                     
                                     />
                             </div>      
