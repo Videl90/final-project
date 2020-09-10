@@ -34,11 +34,15 @@
     "dotenv": "^8.2.0",
     "express": "^4.16.3",
     "express-session": "^1.17.1",
+    "google-maps-react": "^2.0.6",
     "if-env": "^1.0.4",
     "jquery": "^3.5.1",
     "mongoose": "^5.3.16",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
-    "react-day-picker": "^7.4.8"
+    "react-day-picker": "^7.4.8",
+    "react-geocode": "^0.2.1",
+    "react-google-autocomplete": "^1.2.6",
+    "react-google-maps": "^9.4.5"
   }
 }

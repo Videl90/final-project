@@ -1,6 +1,8 @@
+
 .agenda-title{
     background-color:#ff8023;
     padding-top: 12px;
+    border-radius: 3px 0 0 3px;
 }
 
 .agenda-date{
@@ -13,6 +15,7 @@
     background-color: #192433;
     text-align:center;
     padding-top: 12px;
+    border-radius:0 3px 3px 0;
 }
 
 .title-info{
