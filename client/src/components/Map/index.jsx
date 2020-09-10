@@ -1,92 +1,45 @@
-import React, {useState, useEffect} from "react";
-import {
-    GoogleMap,
-    withScriptjs,
-    withGoogleMap,
-} from 'react-google-maps';
-import Autocomplete from 'react-google-autocomplete';
-import Geocode from "react-geocode";
-import credentials from "../../credentials";
-const mapURL = credentials.mapsKey
+import React from 'react';
+import mapboxgl from 'mapbox-gl';
+import './styles.css'
 
-Geocode.setApiKey(mapURL);
-Geocode.enableDebug();
+mapboxgl.accessToken = 'pk.eyJ1IjoidmlkZWw5MCIsImEiOiJja2V3Y3dtejQzZ3o3MnJtc3I5end6cnViIn0.6yRF57wgKckZmnVfOaUEhA';
 
-
-
-
-function Map(props) {
-    const [state, setState] = useState({
-        address: "",
-        area: "",
-        city: "",
-        state: "",
-        markerPosition: {
-            lat: "",
-            lng: ""
-        },
-        mapPosition: {
-            lat: "",
-            lng: ""
-        }
-
-    }); 
-    console.log(state);
-
-    useEffect(()=>{
-        console.log(state);
-    }, [state]);
-    
-    const onPlaceSelected = ( place ) => {
-        const address = place.formatted_address,
-        addressArray =  place.address_components,
-        city = this.getCity( addressArray ),
-        area = this.getArea( addressArray ),
-        state = this.getState( addressArray ),
-        latValue = place.geometry.location.lat(),
-        lngValue = place.geometry.location.lng();// Set these values in the state.
-    setState({
-        address: ( address ) ? address : '',
-        area: ( area ) ? area : '',
-        city: ( city ) ? city : '',
-        state: ( state ) ? state : '',
-        markerPosition: {
-         lat: latValue,
-         lng: lngValue
-        },
-        mapPosition: {
-         lat: latValue,
-         lng: lngValue
-        },
-       })
-    };
-    console.log(state)
-
-  return (
-    <>
-        <Autocomplete
-            style={{
-                width: '100%',
-                height: '40px',
-                paddingLeft: '16px',
-                marginTop: '2px',
-                marginBottom: '100px'
-            }}
-            onPlaceSelected={ (state) => onPlaceSelected(state) }
-            types={['(regions)']}
-        />
-        <GoogleMap 
-            defaultZoom={5}
-            defaultCenter={{ lat: -34.397, lng: 150.644}}
-        />
-    </>
-    );
+class Application extends React.Component {
+    // Code from the next few steps will go here
+    constructor(props) {
+        super(props);
+        this.state = {
+        lng: 5,
+        lat: 34,
+        zoom: 2
+        };
+    }
+    componentDidMount() {
+        const map = new mapboxgl.Map({
+        container: this.mapContainer,
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [this.state.lng, this.state.lat],
+        zoom: this.state.zoom
+        });
+        map.on('move', () => {
+            this.setState({
+                lng: map.getCenter().lng.toFixed(4),
+                lat: map.getCenter().lat.toFixed(4),
+                zoom: map.getZoom().toFixed(2)
+            });
+        });
+    }
+    render() {
+        return (
+            <div>
+                <div className='sidebarStyle'>
+                    <div>Longitude: {this.state.lng} | Latitude: {this.state.lat} | Zoom: {this.state.zoom}</div>
+                </div>
+                <div ref={el => this.mapContainer = el} className="mapContainer" />
+            </div>
+        )
+    }
 }
+     
 
-
-
-export default withScriptjs(
-    withGoogleMap(
-        Map
-    )
-);
+export default Application;

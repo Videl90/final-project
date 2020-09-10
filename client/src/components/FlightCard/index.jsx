@@ -7,6 +7,7 @@ function FlightCard() {
         <div className="row">
                 <div className="col-12 col-lg-12 col-md-12 col-sm-12">
                     <div className="flight-container-card">
+                        <div className="your-flight-info">Your Flight Info</div>
                         <div className="row">
                             <div className="col" align="center">
                                 <p className="query-text">LOGOLOGO</p>
