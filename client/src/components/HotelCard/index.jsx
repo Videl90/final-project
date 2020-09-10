@@ -1,7 +1,12 @@
 import React from "react";
 import "./styles.css";
+import Map from "../Map";
+import credentials from '../../credentials';
+const mapURL = `http://maps.googleapis.com/maps/api/js?v=3.exp&key=${credentials.mapsKey}`;
+
 
 function HotelCard() {
+    
   return (
     <>
         <div className="hotel-container">
@@ -22,16 +27,21 @@ function HotelCard() {
                 <div className="col-12 col-xs-12">
                     <div className="google-maps">
                         Google Maps
+                        <Map
+                            googleMapURL = {mapURL} 
+                            containerElement = {<div style={{height:'176px'}}/>}
+                            mapElement = {<div style={{ height:'100%'}}/>}
+                            loadingElement= {<p>CARGANDO</p>}
+                        />
                     </div>
                 </div>
             </div>
-                <div className="google-map"></div>
         </div>
-        </div>
-    </div>
     </>
     
     );
 }
 
-export default HotelCard;
+
+
+export default HotelCard
