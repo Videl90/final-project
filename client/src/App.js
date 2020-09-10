@@ -7,6 +7,7 @@ import NewTrip from "./pages/NewTrip";
 import FlightResults from "./pages/Flightresults";
 // import FlightResults from "./pages/FlightResults";
 import Agenda from "./pages/Agenda";
+import Checklist from "./pages/checklist";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route exact path="/newtrip" component={NewTrip} />
         <Route exact path="/flightresults" component={FlightResults} />
         <Route exact path="/agenda" component={Agenda} />
+        <Route exact path="/checklist" component={Checklist} />
         </Switch>
       </div>
     </Router>

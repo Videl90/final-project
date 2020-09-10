@@ -29,6 +29,7 @@ module.exports = {
                 _id: req.user.id
             })
             .populate('trips')
+            .populate('checklist')
             .then(user => {
                 res.json(user);
             })

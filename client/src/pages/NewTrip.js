@@ -8,8 +8,11 @@ import API from "../utils/API";
 import Flights from "../components/Flight";
 import Loading from "../components/loading";
 import Modal from "../components/Modal";
+import { useHistory } from "react-router-dom";
 
 function NewTrip() {
+
+    const history = useHistory();
 
     const [tripInfo, setTripInfo] = useState({
         origin:"", 
@@ -95,12 +98,17 @@ function NewTrip() {
             departureTime: oneFlight[0].itineraries[0].segments[0].departure.at,
             arrivalTime: oneFlight[0].itineraries[0].segments[(oneFlight[0].itineraries[0].segments.length) - 1].departure.at,
             departureTime2: oneFlight[0].itineraries[1].segments[0].departure.at,
-            arrivalTime2: oneFlight[0].itineraries[1].segments[(oneFlight[0].itineraries[1].segments.length) - 1].departure.at
+            arrivalTime2: oneFlight[0].itineraries[1].segments[(oneFlight[0].itineraries[1].segments.length) - 1].departure.at,
+            airlineDeparture: oneFlight[0].itineraries[0].segments[0].carrierCode,
+            airlineArrival: oneFlight[0].itineraries[1].segments[0].carrierCode,
         }
         API.saveTrip({info: tripInfo, extraInfo: additionalInfo})
         .then(dbTrip => {
             console.log(dbTrip);
-        })
+            history.push({
+                pathname:"/checklist"
+            });
+        });
     }
 
     return (

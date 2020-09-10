@@ -26,8 +26,13 @@ a:hover{
     text-decoration: none;
 }
 
-ul {
+.tripsList {
     list-style-type: none;
+    cursor: pointer;
+}
+
+.tripName:hover {
+    color: #ff8023;
 }
 
 /* .col-xs-12 {
