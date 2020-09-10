@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.css";
 import Map from "../Map";
 import credentials from '../../credentials';
-const mapURL = `http://maps.googleapis.com/maps/api/js?v=3.exp&key=${credentials.mapsKey}`;
+const mapURL = `http://maps.googleapis.com/maps/api/js?v=3.exp&key=${process.env.googleApiKey}`;
 
 
 function HotelCard() {
