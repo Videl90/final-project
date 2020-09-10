@@ -1,92 +1,59 @@
-import React, {useState, useEffect} from "react";
-import {
-    GoogleMap,
-    withScriptjs,
-    withGoogleMap,
-} from 'react-google-maps';
-import Autocomplete from 'react-google-autocomplete';
-import Geocode from "react-geocode";
-import credentials from '../../credentials';
-const mapURL = credentials.mapsKey
+import React, { useState, useRef, useCallback } from 'react'
+import MapGL from 'react-map-gl'
+import Geocoder from 'react-map-gl-geocoder'
+import 'mapbox-gl/dist/mapbox-gl.css'
+import 'react-map-gl-geocoder/dist/mapbox-gl-geocoder.css' 
 
-Geocode.setApiKey(mapURL);
-Geocode.enableDebug();
+const MAPBOX_TOKEN = 'pk.eyJ1IjoidmlkZWw5MCIsImEiOiJja2V3MjNkNWswZ2VlMnhueHhnaDJwdGRoIn0.TQT1TtsKgP3VhcnzHvUDZA';
+ 
+const Map = () => {
+  
+  const [viewport, setViewport] = useState({
+    latitude: 19.421949,
+    longitude: -99.134391,
+    zoom: 11
+  });
+  
+  const mapRef = useRef();
 
+  const handleViewportChange = useCallback(
+    (newViewport) => setViewport(newViewport),
+    []
+  );
+ 
+  const handleGeocoderViewportChange = useCallback( (newViewport) => {
+      const geocoderDefaultOverrides = { transitionDuration: 1000 };
 
-
-
-function Map(props) {
-    const [state, setState] = useState({
-        address: "",
-        area: "",
-        city: "",
-        state: "",
-        markerPosition: {
-            lat: "",
-            lng: ""
-        },
-        mapPosition: {
-            lat: "",
-            lng: ""
-        }
-
-    }); 
-    console.log(state);
-
-    useEffect(()=>{
-        console.log(state);
-    }, [state]);
-    
-    const onPlaceSelected = ( place ) => {
-        const address = place.formatted_address,
-        addressArray =  place.address_components,
-        city = this.getCity( addressArray ),
-        area = this.getArea( addressArray ),
-        state = this.getState( addressArray ),
-        latValue = place.geometry.location.lat(),
-        lngValue = place.geometry.location.lng();// Set these values in the state.
-    setState({
-        address: ( address ) ? address : '',
-        area: ( area ) ? area : '',
-        city: ( city ) ? city : '',
-        state: ( state ) ? state : '',
-        markerPosition: {
-         lat: latValue,
-         lng: lngValue
-        },
-        mapPosition: {
-         lat: latValue,
-         lng: lngValue
-        },
-       })
-    };
-    console.log(state)
-
+      return handleViewportChange({
+        ...newViewport,
+        ...geocoderDefaultOverrides
+      });
+     },
+    []
+  );
+ 
   return (
-    <>
-        <Autocomplete
-            style={{
-                width: '100%',
-                height: '40px',
-                paddingLeft: '16px',
-                marginTop: '2px',
-                marginBottom: '100px'
-            }}
-            onPlaceSelected={ (state) => onPlaceSelected(state) }
-            types={['(regions)']}
+    <div style={{ height: "50vh" }}>
+      <MapGL
+        ref={mapRef}
+        {...viewport}
+        width="100%"
+        height="200px"
+        onViewportChange={handleViewportChange}
+        mapStyle="mapbox://styles/videl90/ckex2tjbe006a1aqpspx6eduu"
+        mapboxApiAccessToken={MAPBOX_TOKEN}
+      >
+        <Geocoder
+          mapRef={mapRef}
+          width="1000px"
+          border="solid 1px#FF8023"
+          onViewportChange={handleGeocoderViewportChange}
+          mapboxApiAccessToken={MAPBOX_TOKEN}
+          position="top-left"
         />
-        <GoogleMap 
-            defaultZoom={5}
-            defaultCenter={{ lat: -34.397, lng: 150.644}}
-        />
-    </>
-    );
-}
-
-
-
-export default withScriptjs(
-    withGoogleMap(
-        Map
-    )
-);
+      </MapGL>
+    </div>
+  );
+};
+ 
+export default Map;
