@@ -4,7 +4,7 @@ import "./styles.css";
 function Button(props) {
   return (
     <div>
-       <button type="button" class="btn btn-outline-primary">{props.btnName}</button>
+       <button type="button" className="btn btn-outline-primary">{props.btnName}</button>
     </div>);
 }
 
