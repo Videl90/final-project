@@ -13,7 +13,10 @@ function MyTripsList(props) {
                         {props.tripsInfo.length !== 0 ? (
                             props.tripsInfo.map(({ tripName, _id }) => {
                                 return(
-                                    <li name="tripname" onClick={props.filterFlight} className="list-group-item card-text tripName" data-value={_id}>{tripName}
+                                    <li name="tripname" className="list-group-item card-text tripName">
+                                        <div onClick={props.filterFlight} data-value={_id}>
+                                        {tripName}
+                                        </div>
                                         <button
                                             type="button"
                                             data-toggle="modal"
