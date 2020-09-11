@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from "react";
-import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Wrapper from "../components/Wrapper";
 import Flights from "../components/Flight";
@@ -16,7 +15,6 @@ function Results() {
 
     return(
         <>
-            <Navbar />
             <Wrapper> 
                 <Header />
                 <Flights />
