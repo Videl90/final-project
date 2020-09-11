@@ -8,39 +8,42 @@ import LocationCard from "../components/LocationCard";
 import FlightCard from "../components/FlightCard";
 import Footer from "../components/Footer";
 import API from "../utils/API";
-import Modal from "../components/ModalChecklist";
+import ModalChecklist from "../components/ModalChecklist";
+import { Modal, Button } from "react-bootstrap";
+
+function Agenda() {
+  const [trip, setTrip] = useState([]);
 
 
+  const [oneTrip, setOneTrip] = useState([]);
 
-function Agenda(){
+  const [showModal, setShowModal] = useState(false);
 
-    const [trip, setTrip] = useState([]);
+  useEffect(() => {
+    API.allTrips().then((dbTrips) => {
+      console.log(dbTrips.data);
+      setTrip(dbTrips.data);
+    });
+  }, []);
 
-    const [oneTrip, setOneTrip] = useState([]);
+  function filterFlight(event) {
+    event.preventDefault();
+    let tripId = event.currentTarget.getAttribute("data-value");
+    const filterTrip = trip.filter((item) => item._id == tripId);
+    console.log(tripId,filterTrip);
+    setOneTrip(filterTrip);
+  }
 
-    const [showModal, setShowModal] = useState(false);
+  function getChecklist(event) {
+    event.preventDefault();
+    console.log("HOLA", event.target);
+    filterFlight(event);
+    setShowModal(true);
+  }
 
-    useEffect(() => {
-        API.allTrips()
-        .then(dbTrips => {
-            console.log(dbTrips.data);
-            setTrip(dbTrips.data);
-        })
-    }, []);
-
-    function filterFlight(event) {
-        event.preventDefault();
-        let tripId = event.target.getAttribute('data-value');
-        const filterTrip = trip.filter(item => item._id == tripId);
-        console.log(filterTrip);
-        setOneTrip(filterTrip);
-    }
-
-    function getChecklist(event) {
-        event.preventDefault();
-        console.log("HOLA");
-        setShowModal(true);
-    }
+  function handleHideModal() {
+    setShowModal(false);
+  }
 
     function handleHideModal() {
         setShowModal(false);
@@ -81,15 +84,22 @@ function Agenda(){
                         </AgendaContainer>
                     </div>
                 </div>
-                <Modal 
-                    oneList = {oneTrip}
+              </div>
+              <div className="row">
+                <HotelCard />
+              </div>
+            </AgendaContainer>
+          </div>
+        </div>
+        <ModalChecklist 
+                    oneList = {oneTrip[0]}
                     show = {showModal}
                     onHide = {handleHideModal}
                 />
-            </Wrapper>
-            <Footer /> 
-        </div>
-    )
+      </Wrapper>
+      <Footer />
+    </div>
+  );
 }
 
 export default Agenda;
