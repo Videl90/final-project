@@ -43,6 +43,7 @@ function SignUp(){
 
     return (
         <div>
+              
             <SignUpForm 
                 onChange={handleSaveInfo}
                 handleSubmitForm={handleSubmitForm}
