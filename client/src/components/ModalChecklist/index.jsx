@@ -7,7 +7,6 @@ function ModalList(props) {
     const { oneList: list } = props;
     console.log("MODAL", props, list);
   return (
-    // <h1>Hola</h1>
         <Modal
           {...props}
           size="sm"
@@ -52,7 +51,6 @@ function ModalList(props) {
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={props.onHide}>Close</Button>
-            {/* <Button onClick={props.chooseFlight}>Edit</Button> */}
           </Modal.Footer>
         </Modal>
       );

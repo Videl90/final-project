@@ -21,10 +21,11 @@ function ModalProject (props) {
         return newDuration[1]
     }
 
+    const flight = props.oneFlight[0];
+
     return (
         // <h1>Hola</h1>
-        props.oneFlight.map(flight => {
-            return (
+        
                 <Modal
         {...props}
         size="md"
@@ -38,25 +39,26 @@ function ModalProject (props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
+          {flight? 
         <Container>
             <Row>
                 <Col xs={6} md={6}>
                 <div>
                     <h6 className="departure-title">Departure</h6>
-                    {console.log(flight.itineraries[0].segments[0].departure.at)}
-                    <p className="flight-info"><strong>Date:</strong> {changeFormat2(flight.itineraries[0].segments[(flight.itineraries[0].segments.length) - 1].departure.at)}</p>
-                    <p className="flight-info"><strong>Departure Time:</strong> <span>{changeFormat(flight.itineraries[0].segments[0].departure.at)}</span></p>
-                    <p className="flight-info"><strong>Duration:</strong> <span>{changeDuration(flight.itineraries[0].duration)}</span></p>
-                    <p><strong>Stops: </strong><span>{(flight.itineraries[0].segments.length) - 1}</span></p>
+                    {console.log(flight?.itineraries[0].segments[0].departure.at)}
+                    <p className="flight-info"><strong>Date:</strong> {changeFormat2(flight?.itineraries[0].segments[(flight?.itineraries[0].segments.length) - 1].departure.at)}</p>
+                    <p className="flight-info"><strong>Departure Time:</strong> <span>{changeFormat(flight?.itineraries[0].segments[0].departure.at)}</span></p>
+                    <p className="flight-info"><strong>Duration:</strong> <span>{changeDuration(flight?.itineraries[0].duration)}</span></p>
+                    <p><strong>Stops: </strong><span>{(flight?.itineraries[0].segments.length) - 1}</span></p>
                 </div>
                 </Col>
                 <Col xs={6} md={6}>
                 <div>
                     <h6 className="departure-title">Arrival</h6>
-                    <p className="flight-info"><strong>Date:</strong> {changeFormat2(flight.itineraries[1].segments[(flight.itineraries[1].segments.length) - 1].departure.at)}</p>
-                    <p className="flight-info"><strong>Departure Time:</strong> <span>{changeFormat(flight.itineraries[1].segments[(flight.itineraries[1].segments.length) - 1].departure.at)}</span></p>
-                    <p className="flight-info"><strong>Duration:</strong> <span>{changeDuration(flight.itineraries[1].duration)}</span></p>
-                    <p><strong>Stops: </strong><span>{(flight.itineraries[1].segments.length) - 1}</span></p>
+                    <p className="flight-info"><strong>Date:</strong> {changeFormat2(flight?.itineraries[1].segments[(flight?.itineraries[1].segments.length) - 1].departure.at)}</p>
+                    <p className="flight-info"><strong>Departure Time:</strong> <span>{changeFormat(flight?.itineraries[1].segments[(flight?.itineraries[1].segments.length) - 1].departure.at)}</span></p>
+                    <p className="flight-info"><strong>Duration:</strong> <span>{changeDuration(flight?.itineraries[1].duration)}</span></p>
+                    <p><strong>Stops: </strong><span>{(flight?.itineraries[1].segments.length) - 1}</span></p>
                 </div>
                 </Col>
             </Row>
@@ -67,17 +69,18 @@ function ModalProject (props) {
                 <Col xs={6} md={6}>
                     <div>
                         <p><strong>Luggage: </strong><i class="fas fa-suitcase-rolling"></i></p>
-                        <p><strong>Class: </strong><span>{flight.travelerPricings[0].fareDetailsBySegment[0].cabin}</span></p>
-                        <p><strong>Available seats:</strong> {flight.numberOfBookableSeats}</p>
+                        <p><strong>Class: </strong><span>{flight?.travelerPricings[0].fareDetailsBySegment[0].cabin}</span></p>
+                        <p><strong>Available seats:</strong> {flight?.numberOfBookableSeats}</p>
                     </div>
                 </Col>
                 <Col xs={6} md={6}>
-                <p><strong>Adult Price:</strong> {flight.travelerPricings[0].price.total * 2} {flight.price.currency}</p>
+                <p><strong>Adult Price:</strong> {flight?.travelerPricings[0].price.total * 2} {flight.price.currency}</p>
                 <p><strong>Child Price:</strong> {flight.travelerPricings[1].price.total * 2} {flight.price.currency}</p>
                 <p><strong>Total:</strong> {flight.price.total} {flight.price.currency}</p>
                 </Col>
             </Row>   
         </Container>
+        : "" }
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>
@@ -85,8 +88,7 @@ function ModalProject (props) {
       </Modal.Footer>
     </Modal>
             )
-        })
-    )
+
 }
 
 export default ModalProject;

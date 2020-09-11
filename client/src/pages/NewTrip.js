@@ -121,7 +121,7 @@ function NewTrip() {
             <Navbar2/>
             <Wrapper>
                 <Header>
-                    <h4>Welcome {userInfo.username} !</h4>
+                    <h4>Welcome {userInfo.username}</h4>
                 </Header>
                 <NewTripInput 
                     onChange={handleTripInfo}

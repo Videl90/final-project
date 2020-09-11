@@ -3,17 +3,14 @@ import Wrapper from "../components/Wrapper";
 import Navbar2 from "../components/Navbar2";
 import MyTrips from "../components/MyTrips";
 import AgendaContainer from "../components/AgendaContainer";
-import AgendaTitle from "../components/AgendaTitle"
 import LocationCard from "../components/LocationCard";
 import FlightCard from "../components/FlightCard";
 import Footer from "../components/Footer";
 import API from "../utils/API";
 import ModalChecklist from "../components/ModalChecklist";
-import { Modal, Button } from "react-bootstrap";
 
 function Agenda() {
   const [trip, setTrip] = useState([]);
-
 
   const [oneTrip, setOneTrip] = useState([]);
 
@@ -29,8 +26,8 @@ function Agenda() {
   function filterFlight(event) {
     event.preventDefault();
     let tripId = event.currentTarget.getAttribute("data-value");
-    const filterTrip = trip.filter((item) => item._id == tripId);
-    console.log(tripId,filterTrip);
+    const filterTrip = trip.filter((item) => item._id === tripId);
+    console.log(tripId, filterTrip);
     setOneTrip(filterTrip);
   }
 
@@ -45,9 +42,6 @@ function Agenda() {
     setShowModal(false);
   }
 
-    function handleHideModal() {
-        setShowModal(false);
-    }
 
     return (
         <div>
@@ -86,16 +80,16 @@ function Agenda() {
                 </div>
               </div>
               <div className="row">
-                <HotelCard />
+                <LocationCard />
               </div>
             </AgendaContainer>
           </div>
         </div>
-        <ModalChecklist 
-                    oneList = {oneTrip[0]}
-                    show = {showModal}
-                    onHide = {handleHideModal}
-                />
+        <ModalChecklist
+          oneList={oneTrip[0]}
+          show={showModal}
+          onHide={handleHideModal}
+        />
       </Wrapper>
       <Footer />
     </div>

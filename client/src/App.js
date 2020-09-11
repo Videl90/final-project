@@ -7,6 +7,7 @@ import NewTrip from "./pages/NewTrip";
 import FlightResults from "./pages/Flightresults";
 import Agenda from "./pages/Agenda";
 import Checklist from "./pages/checklist";
+import { Modal } from 'react-bootstrap';
 
 
 function App() {
