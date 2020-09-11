@@ -73,7 +73,7 @@ function Agenda() {
               <div className="row">
                 <LocationCard />
               </div>
-            </AgendaContainer> */}
+            </AgendaContainer> 
           </div>
         </div>
         <ModalChecklist
