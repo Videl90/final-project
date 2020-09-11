@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "../components/Navbar";
+import Navbar2 from "../components/Navbar2";
 import Header from "../components/Header";
 import NewTripInput from "../components/NewTripInput";
 import Footer from "../components/Footer";
@@ -118,7 +118,7 @@ function NewTrip() {
 
     return (
         <div>
-            <Navbar />
+            <Navbar2/>
             <Wrapper>
                 <Header>
                     <h4>Welcome {userInfo.username}</h4>

@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import Navbar from "../components/Navbar";
 import Wrapper from "../components/Wrapper2";
 import Header from "../components/Header";
 import List from "../components/List";
@@ -70,7 +69,6 @@ function Checklist() {
 
     return(
         <>
-        <Navbar />
         <Header>
             <h5>Your trip <span><strong></strong></span> has been saved! Create your travel checklist</h5>
         </Header>
