@@ -9,11 +9,14 @@ export default class MyForm extends React.Component {
     this.handleDayChange = this.handleDayChange.bind(this);
     this.state = {
       selectedDay: undefined,
+      testinput: ""
     };
   }
 
-  handleDayChange(day) {
-    this.setState({ selectedDay: day });
+  handleDayChange(day, modifiers, dayPickerInput) {
+    const input= dayPickerInput.getInput()
+    console.log(input.value);
+    this.setState({ selectedDay: day, testinput: input.value});
     const event = {
       target: {
         name: "departureDate",
@@ -21,15 +24,21 @@ export default class MyForm extends React.Component {
       }
     }
     this.props.onChange(event);
+    console.log(this.state);
     // console.log({day,a,b,c});
   }
 
   render() {
     const { selectedDay } = this.state;
     return (
-      <div>
+      <div style={{ 
+        color:"#192433"
+        }}>
         {selectedDay && <p >Day: {selectedDay.toLocaleDateString()}</p>}
-        <DayPickerInput placeholder="Departing" onDayChange={this.handleDayChange}/>
+        <DayPickerInput
+        placeholder="Departing"
+        selectedDay={selectedDay} 
+       />
       </div>
     );
   }

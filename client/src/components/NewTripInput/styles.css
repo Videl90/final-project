@@ -63,7 +63,7 @@
     background-color:#ffffff;
 }
 
-.fa-search-location, .fa-list, .fa-user, .fa-pen-alt{
+.fa-search-location, .fa-list, .fa-user, .fa-pen-alt, .fa-calendar-week{
     color: #ff8023;
 }
 
@@ -81,3 +81,4 @@
         min-width: %;
     }
 } */
+

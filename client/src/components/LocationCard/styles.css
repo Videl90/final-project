@@ -1,6 +1,10 @@
 
 .hotel-container {
     width: 100%;
+    border:solid 1px #81b6ff;
+    border-radius:3px;
+    margin-bottom:30px;
+    
 }
 
 .google-maps {
