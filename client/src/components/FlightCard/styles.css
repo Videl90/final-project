@@ -3,6 +3,21 @@
     width: 80%px;
 }
 
+.flight-container-card{
+    border:solid 1px #81b6ff;
+    border-radius:3px;
+    margin-bottom:30px;
+}
+
+.your-flight-info {
+    background-color:#192433;
+    color:#ffffff;
+    height:30px;
+    padding: 3px 0 3px 15px;
+    border-radius:3px 3px 0 0;
+    margin-bottom: 30px;
+}
+
 @media (max-width: 768px) {
     .query-text {
         font-size: 14px;
