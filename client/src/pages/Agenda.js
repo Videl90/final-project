@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "../components/Navbar";
+import Navbar2 from "../components/Navbar2";
 import Wrapper from "../components/Wrapper";
 import MyTrips from "../components/MyTrips";
+import AgendaTitle from "../components/AgendaTitle";
 import AgendaContainer from "../components/AgendaContainer";
 import LocationCard from "../components/LocationCard";
 import FlightCard from "../components/FlightCard";
@@ -44,7 +45,7 @@ function Agenda() {
 
   return (
     <div>
-      <Navbar />
+      <Navbar2 />
       <Wrapper>
         <div className="row">
           <div className="col-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
@@ -56,6 +57,13 @@ function Agenda() {
           </div>
           <div className="col-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
             <AgendaContainer>
+              <div className="row">
+                <div className="col-12 col-lg-12 col-md-12 col-sm-12">
+                  <AgendaTitle 
+                    flight={oneTrip}
+                  />
+                </div>
+              </div>
               <div className="row">
                 <div className="col-12 col-lg-12 col-md-12 col-sm-12">
                   <FlightCard flight={oneTrip} />
