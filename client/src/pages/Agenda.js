@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Wrapper from "../components/Wrapper";
 import Navbar2 from "../components/Navbar2";
 import MyTrips from "../components/MyTrips";
-import AgendaTitle from "../components/AgendaTitle";
 import AgendaContainer from "../components/AgendaContainer";
 import AgendaTitle from "../components/AgendaTitle";
 import LocationCard from "../components/LocationCard";
