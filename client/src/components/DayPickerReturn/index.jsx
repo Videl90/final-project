@@ -30,7 +30,7 @@ export default class MyForm extends React.Component {
     return (
       <div className="dayPickerInput">
         {selectedDay && <p >Day: {selectedDay.toLocaleDateString()}</p>}
-        <DayPickerInput placeholder="Returning"/>
+        <DayPickerInput placeholder="Returning" onDayChange={this.handleDayChange}/>
       </div>
     );
   }
