@@ -10,6 +10,8 @@ const MongoStore = require('connect-mongo')(session);
 
 require("dotenv").config();
 
+
+
 //Set up the express app
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -37,11 +39,6 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/public"));
-}
-
 // Add routes, both API and view
 app.use(routes);
 
@@ -55,6 +52,13 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/tripslist",
 }
 );
 
+if (process.env.NODE_ENV === 'production') {
+  // Set static folder
+  app.use(express.static('client/build'));
+  app.get('/*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  });
+}
 
 // Start the API server
 app.listen(PORT, function() {
