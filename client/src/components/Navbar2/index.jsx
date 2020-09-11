@@ -14,7 +14,7 @@ function Navbar2(){
           
               <NavDropdown.Item href="/newtrip" className="navButton">NEW TRIP</NavDropdown.Item>
               <NavDropdown.Item href="/agenda" className="navButton">AGENDA</NavDropdown.Item>
-              <NavDropdown.Item href="/logout" className="navButton">LOG OUT</NavDropdown.Item>
+
         
           </Nav>
         </Navbar.Collapse>

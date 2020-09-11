@@ -5,7 +5,7 @@ import "./styles.css"
 function Footer(){
     return (
         <div className="footer">
-        This is a footer
+            Copyright © 2020
         </div>
     )
 }
