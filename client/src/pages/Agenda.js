@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "../components/Navbar";
 import Wrapper from "../components/Wrapper";
+import Navbar2 from "../components/Navbar2";
 import MyTrips from "../components/MyTrips";
 import AgendaContainer from "../components/AgendaContainer";
 import AgendaTitle from "../components/AgendaTitle"
@@ -48,7 +48,7 @@ function Agenda(){
 
     return (
         <div>
-            <Navbar />
+            <Navbar2/>
             <Wrapper>
                 <div className="row">
                     <div className="col-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">

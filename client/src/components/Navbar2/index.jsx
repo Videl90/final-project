@@ -1,11 +1,24 @@
 import React from "react";
 import "./styles.css"
+import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
+import Icon from "../NavIcon";
 
 
 
 function Navbar2(){
     return (
-     <div></div>
+        <Navbar expand="lg" className="navbar">
+        <Navbar.Toggle aria-controls="basic-navbar-nav"><Icon></Icon></Navbar.Toggle>
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+          
+              <NavDropdown.Item href="/newtrip" className="navButton">NEW TRIP</NavDropdown.Item>
+              <NavDropdown.Item href="/agenda" className="navButton">AGENDA</NavDropdown.Item>
+              <NavDropdown.Item href="/logout" className="navButton">LOG OUT</NavDropdown.Item>
+        
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
     )
 }
 
