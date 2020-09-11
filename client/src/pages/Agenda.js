@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Wrapper from "../components/Wrapper";
 import Navbar2 from "../components/Navbar2";
 import MyTrips from "../components/MyTrips";
+import AgendaTitle from "../components/AgendaTitle";
 import AgendaContainer from "../components/AgendaContainer";
 import LocationCard from "../components/LocationCard";
 import FlightCard from "../components/FlightCard";
@@ -42,41 +43,30 @@ function Agenda() {
     setShowModal(false);
   }
 
-
-    return (
-        <div>
-            <Navbar2/>
-            <Wrapper>
-                <div className="row">
-                    <div className="col-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
-                        <MyTrips
-                            tripsInfo = {trip}
-                            filterFlight = {filterFlight}
-                            getChecklist = {getChecklist}
-                        />
-                    </div>
-                    <div className="col-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
-                        <AgendaContainer>
-                            <div className="row">
-                                <div className="col-12 col-lg-12 col-md-12 col-sm-12">
-                                        <AgendaTitle/>
-                                        <FlightCard
-                                            flight = {oneTrip}
-                                        />
-                                </div>
-                                    {/* <div className="col-3 col-lg-3 col-md-12 col-sm-12">
-                                        <CurrencyExchange>
-
-                                        </CurrencyExchange>
-                                    </div> */}
-                            </div>
-                            <div className="row">
-                                    <LocationCard
-                                    
-                                    />
-                            </div>      
-                        </AgendaContainer>
-                    </div>
+  return (
+    <div>
+      <Navbar2 />
+      <Wrapper>
+        <div className="row">
+          <div className="col-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+            <MyTrips
+              tripsInfo={trip}
+              filterFlight={filterFlight}
+              getChecklist={getChecklist}
+            />
+          </div>
+          <div className="col-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
+            <AgendaContainer>
+              <div className="row">
+                <div className="col-12 col-lg-12 col-md-12 col-sm-12">
+                  <AgendaTitle 
+                    flight={oneTrip}
+                  />
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-12 col-lg-12 col-md-12 col-sm-12">
+                  <FlightCard flight={oneTrip} />
                 </div>
               </div>
               <div className="row">

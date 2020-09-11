@@ -1,26 +1,41 @@
 import React from "react";
 import "./styles.css";
 
-function AgendaTitle() {
+function AgendaTitle(props) {
+
+    let changeFormat = (date) => {
+        let newDate = date.split("T");
+        return newDate[0]
+    }
+
+    const { flight } = props;
+    console.log("HOLA!!!!!!!!!!!!!!!!!!!!!!", props, flight);
+
   return (
     <>
-        <div className="agenda-tit">
-            <div className="row title-info">
-                <div className="col-6 agenda-title">
-                    <p>Despedida Juan</p>
+    {flight.length !== 0 ? (
+        flight.map((item) => {
+            return(
+                <div className="agenda-tit">
+                    <div className="row title-info">
+                        <div className="col-6 agenda-title">
+                            <p>{item.tripName}</p>
+                        </div>
+                        <div className="col-3 agenda-date">
+                            <p>Date: {changeFormat(item.departureDate)}</p>
+                        </div>
+                        <div className="col-3 trip-type">
+                            <p>{item.category}</p>
+                        </div>
+                    </div>
                 </div>
-                <div className="col-3 agenda-date">
-                    <p>Date: 10/10/20</p>
-                </div>
-                <div className="col-3 trip-type">
-                    <p>Vacation</p>
-                </div>
-            </div>
-        </div>
-
-    
+            )
+        })
+        
+  ): (
+      <></>
+  )}
     </>
-    
     );
 }
 
