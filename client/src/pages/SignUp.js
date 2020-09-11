@@ -43,9 +43,6 @@ function SignUp(){
 
     return (
         <div>
-            <Navbar 
-                id = {userInfo}
-            />
             <SignUpForm 
                 onChange={handleSaveInfo}
                 handleSubmitForm={handleSubmitForm}
